@@ -3382,23 +3382,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/misc_lab)
-"awi" = (
-/obj/item/reagent_containers/glass/bottle/epinephrine{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/item/reagent_containers/syringe/antiviral,
-/obj/item/reagent_containers/syringe/antiviral,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/glass/bottle/charcoal{
-	pixel_x = -4;
-	pixel_y = -3
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/sleeper)
 "awo" = (
 /obj/structure/rack,
 /obj/machinery/light/small{
@@ -26085,6 +26068,29 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/chapel/office)
+"fTU" = (
+/obj/item/radio/intercom{
+	pixel_x = -27
+	},
+/obj/item/reagent_containers/glass/bottle/epinephrine{
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/obj/item/reagent_containers/glass/bottle/epinephrine{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/reagent_containers/glass/bottle/charcoal{
+	pixel_x = -4;
+	pixel_y = -3
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/sleeper)
 "fUp" = (
 /obj/machinery/light{
 	dir = 1
@@ -42812,6 +42818,23 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
+"oiR" = (
+/obj/item/reagent_containers/glass/bottle/epinephrine{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/storage/firstaid/regular{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/bottle/charcoal{
+	pixel_x = -4;
+	pixel_y = -3
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/sleeper)
 "oiT" = (
 /obj/machinery/shower{
 	dir = 8
@@ -56695,29 +56718,6 @@
 /obj/effect/turf_decal/tile/dark_blue/fourcorners/contrasted,
 /turf/open/floor/plasteel/techmaint,
 /area/gateway)
-"voq" = (
-/obj/item/radio/intercom{
-	pixel_x = -27
-	},
-/obj/item/reagent_containers/glass/bottle/epinephrine{
-	pixel_x = -7;
-	pixel_y = 2
-	},
-/obj/item/reagent_containers/glass/bottle/epinephrine{
-	pixel_x = 7;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/syringe,
-/obj/item/reagent_containers/spray/cleaner{
-	pixel_x = -3;
-	pixel_y = 2
-	},
-/obj/item/reagent_containers/glass/bottle/charcoal{
-	pixel_x = -4;
-	pixel_y = -3
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/sleeper)
 "vpk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -96866,8 +96866,8 @@ bmG
 bmG
 seN
 bqS
-voq
-awi
+fTU
+oiR
 cZK
 xWV
 fPQ
