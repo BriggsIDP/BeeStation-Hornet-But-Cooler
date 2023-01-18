@@ -2940,13 +2940,6 @@
 /obj/structure/cable/yellow,
 /turf/open/floor/plating,
 /area/security/warden)
-"ant" = (
-/obj/structure/table,
-/obj/machinery/recharger{
-	pixel_y = 4
-	},
-/turf/open/floor/plasteel/showroomfloor,
-/area/security/warden)
 "anu" = (
 /obj/machinery/vending/security,
 /obj/machinery/firealarm{
@@ -57657,6 +57650,10 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
+"pfu" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/showroomfloor,
+/area/security/warden)
 "pfB" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted,
 /turf/open/floor/plasteel,
@@ -106854,7 +106851,7 @@ aWt
 ajz
 ajz
 amc
-ant
+pfu
 ame
 apO
 ari
