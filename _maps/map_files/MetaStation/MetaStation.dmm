@@ -40371,6 +40371,10 @@
 /obj/item/xenoartifact,
 /turf/open/floor/engine,
 /area/science/explab)
+"haA" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/showroomfloor,
+/area/security/warden)
 "hbi" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -57650,10 +57654,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
-"pfu" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/showroomfloor,
-/area/security/warden)
 "pfB" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted,
 /turf/open/floor/plasteel,
@@ -106851,7 +106851,7 @@ aWt
 ajz
 ajz
 amc
-pfu
+haA
 ame
 apO
 ari
