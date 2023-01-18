@@ -5378,18 +5378,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/quartermaster/warehouse)
-"aAV" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/box;
-	width = 9
-	},
-/turf/open/space/basic,
-/area/space)
 "aAW" = (
 /obj/machinery/door/airlock/external{
 	name = "Labor Camp Shuttle Airlock"
@@ -7561,6 +7549,9 @@
 	},
 /turf/open/floor/wood,
 /area/lawoffice)
+"aKk" = (
+/turf/open/floor/stone,
+/area/space)
 "aKl" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
@@ -40371,10 +40362,6 @@
 /obj/item/xenoartifact,
 /turf/open/floor/engine,
 /area/science/explab)
-"haA" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/showroomfloor,
-/area/security/warden)
 "hbi" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -48578,6 +48565,12 @@
 /obj/effect/turf_decal/tile/red/fourcorners/contrasted,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+"kOF" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/turf/open/floor/stone,
+/area/space)
 "kOK" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -58707,6 +58700,10 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"pGE" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/showroomfloor,
+/area/security/warden)
 "pGN" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -67342,6 +67339,18 @@
 /obj/structure/disposaloutlet,
 /turf/open/floor/engine,
 /area/science/xenobiology)
+"tqb" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/box;
+	width = 9
+	},
+/turf/open/floor/stone,
+/area/space)
 "tqy" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -101202,15 +101211,15 @@ yla
 dne
 dne
 dne
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
 aDu
 aDu
 aDu
@@ -101459,15 +101468,15 @@ wCC
 alF
 alL
 dne
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
 azC
 aFV
 aHu
@@ -101716,15 +101725,15 @@ uYV
 anc
 alL
 dne
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
 azC
 laf
 fJI
@@ -101973,15 +101982,15 @@ peJ
 ajm
 dne
 dne
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
+aKk
 azC
 sBV
 aHw
@@ -102230,15 +102239,15 @@ teT
 ajm
 aqX
 dne
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aAV
-aaa
-aaa
+aKk
+aKk
+kOF
+aKk
+aKk
+aKk
+tqb
+aKk
+aKk
 aDu
 sBV
 aHx
@@ -106851,7 +106860,7 @@ aWt
 ajz
 ajz
 amc
-haA
+pGE
 ame
 apO
 ari
