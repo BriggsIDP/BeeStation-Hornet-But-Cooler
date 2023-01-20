@@ -41699,18 +41699,6 @@
 /obj/structure/lattice/catwalk/over,
 /turf/open/floor/plating,
 /area/maintenance/department/security/brig)
-"kIq" = (
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = 32
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 8
-	},
-/turf/open/floor/wood,
-/area/crew_quarters/dorms)
 "kIr" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -68003,6 +67991,18 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"rpH" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 32
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/space)
 "rpK" = (
 /obj/machinery/light{
 	dir = 8
@@ -145648,7 +145648,7 @@ wtw
 tVx
 utp
 wtw
-kIq
+rpH
 kmZ
 fOP
 dpB
