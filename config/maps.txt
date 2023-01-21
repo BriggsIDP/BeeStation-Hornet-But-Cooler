@@ -51,8 +51,8 @@ map flandstation
 	votable
 endmap
 
-map radstation
-	minplayers 15
+map Radstation
+	minplayers 20
 	votable
 endmap
 

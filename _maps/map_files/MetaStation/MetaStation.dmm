@@ -2940,6 +2940,13 @@
 /obj/structure/cable/yellow,
 /turf/open/floor/plating,
 /area/security/warden)
+"ant" = (
+/obj/structure/table,
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/security/warden)
 "anu" = (
 /obj/machinery/vending/security,
 /obj/machinery/firealarm{
@@ -5378,6 +5385,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/quartermaster/warehouse)
+"aAV" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/box;
+	width = 9
+	},
+/turf/open/space/basic,
+/area/space)
 "aAW" = (
 /obj/machinery/door/airlock/external{
 	name = "Labor Camp Shuttle Airlock"
@@ -7549,9 +7568,6 @@
 	},
 /turf/open/floor/wood,
 /area/lawoffice)
-"aKk" = (
-/turf/open/floor/stone,
-/area/space)
 "aKl" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
@@ -48565,12 +48581,6 @@
 /obj/effect/turf_decal/tile/red/fourcorners/contrasted,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
-"kOF" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
-	},
-/turf/open/floor/stone,
-/area/space)
 "kOK" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -50473,9 +50483,7 @@
 /area/hallway/secondary/exit/departure_lounge)
 "lMn" = (
 /obj/structure/table/glass,
-/obj/machinery/power/apc/auto_name/north{
-	pixel_y = 24
-	},
+/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
@@ -58700,10 +58708,6 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
-"pGE" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/showroomfloor,
-/area/security/warden)
 "pGN" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -67339,18 +67343,6 @@
 /obj/structure/disposaloutlet,
 /turf/open/floor/engine,
 /area/science/xenobiology)
-"tqb" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/box;
-	width = 9
-	},
-/turf/open/floor/stone,
-/area/space)
 "tqy" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -101211,15 +101203,15 @@ yla
 dne
 dne
 dne
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aDu
 aDu
 aDu
@@ -101468,15 +101460,15 @@ wCC
 alF
 alL
 dne
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 azC
 aFV
 aHu
@@ -101725,15 +101717,15 @@ uYV
 anc
 alL
 dne
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 azC
 laf
 fJI
@@ -101982,15 +101974,15 @@ peJ
 ajm
 dne
 dne
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
-aKk
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 azC
 sBV
 aHw
@@ -102239,15 +102231,15 @@ teT
 ajm
 aqX
 dne
-aKk
-aKk
-kOF
-aKk
-aKk
-aKk
-tqb
-aKk
-aKk
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aAV
+aaa
+aaa
 aDu
 sBV
 aHx
@@ -106860,7 +106852,7 @@ aWt
 ajz
 ajz
 amc
-pGE
+ant
 ame
 apO
 ari
