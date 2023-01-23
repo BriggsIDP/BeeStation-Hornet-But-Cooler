@@ -21093,6 +21093,27 @@
 /obj/machinery/vending/snack/random,
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/command)
+"djy" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/box;
+	width = 9
+	},
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/delta;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "djC" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners/contrasted,
 /obj/effect/turf_decal/trimline/dark_blue/filled/line{
@@ -22774,6 +22795,9 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
 /area/science/research)
+"efi" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "efv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
@@ -45003,9 +45027,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
-"pxj" = (
-/turf/open/floor/plasteel/dark,
-/area/space)
 "pxn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
@@ -48206,27 +48227,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
-"raU" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/box;
-	width = 9
-	},
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/delta;
-	width = 9
-	},
-/turf/open/floor/plasteel/dark,
-/area/space)
 "rbg" = (
 /obj/machinery/door/airlock/external{
 	req_access_txt = "13"
@@ -84240,16 +84240,16 @@ aaa
 aaa
 aaa
 aaa
-pxj
-pxj
-pxj
-pxj
-pxj
-pxj
-pxj
-pxj
-pxj
-pxj
+efi
+efi
+efi
+efi
+efi
+efi
+efi
+efi
+efi
+efi
 aaa
 aaa
 aaa
@@ -84497,7 +84497,7 @@ aaa
 aaa
 aaa
 aaa
-pxj
+efi
 aaa
 aaa
 aaa
@@ -84506,7 +84506,7 @@ aaa
 aaa
 aaa
 aaa
-pxj
+efi
 aaa
 aaa
 aaf
@@ -84754,7 +84754,7 @@ aaa
 aaa
 aaa
 aaa
-pxj
+efi
 aaa
 aaa
 aaa
@@ -84763,7 +84763,7 @@ aaa
 aaa
 aaa
 aaa
-pxj
+efi
 aaa
 aaa
 aaf
@@ -85011,7 +85011,7 @@ aaa
 aaa
 aaa
 aaa
-pxj
+efi
 aaa
 aaa
 aaa
@@ -85020,7 +85020,7 @@ aaa
 aaa
 aaa
 aaa
-pxj
+efi
 aaa
 arP
 arP
@@ -85268,16 +85268,16 @@ aaa
 aaa
 aaa
 aaa
-pxj
-pxj
-pxj
-pxj
-pxj
-pxj
-raU
-pxj
-pxj
-pxj
+efi
+efi
+efi
+efi
+efi
+efi
+djy
+efi
+efi
+efi
 aaa
 arP
 asQ

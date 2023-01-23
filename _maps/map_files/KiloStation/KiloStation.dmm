@@ -94295,18 +94295,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
-"hQs" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/kilo;
-	width = 9
-	},
-/turf/open/floor/plasteel/dark,
-/area/space)
 "hQu" = (
 /obj/structure/girder/displaced,
 /obj/structure/grille/broken,
@@ -97624,6 +97612,18 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/virology)
+"oWH" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/kilo;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "oXq" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating{
@@ -98816,6 +98816,9 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/warehouse)
+"raK" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "rcq" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -101505,9 +101508,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/starboard)
-"wzq" = (
-/turf/open/floor/plasteel/dark,
-/area/space)
 "wAy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
@@ -125547,11 +125547,11 @@ anh
 bwu
 acm
 bUG
-wzq
-wzq
-wzq
-wzq
-wzq
+raK
+raK
+raK
+raK
+raK
 bUG
 aaa
 aaa
@@ -125804,11 +125804,11 @@ cLh
 akK
 bwu
 bVn
-wzq
+raK
 aaa
 aaa
 aaa
-wzq
+raK
 acm
 aaa
 aaa
@@ -126061,11 +126061,11 @@ cLi
 bGL
 bUR
 cxs
-wzq
+raK
 aaa
 aaa
 aaa
-wzq
+raK
 acm
 aaa
 aaQ
@@ -126318,11 +126318,11 @@ cLj
 anh
 anh
 anh
-wzq
+raK
 aaa
 aaa
 aaa
-wzq
+raK
 acm
 aaa
 cow
@@ -126575,11 +126575,11 @@ cLk
 akK
 acm
 bUG
-wzq
+raK
 aaa
 aaa
 aaa
-wzq
+raK
 bUG
 acm
 cow
@@ -126832,11 +126832,11 @@ cno
 anh
 anh
 anh
-wzq
+raK
 aaa
 aaa
 aaa
-wzq
+raK
 acm
 aaa
 cow
@@ -127089,11 +127089,11 @@ cnp
 bUP
 bDf
 cxz
-hQs
+oWH
 aaa
 aaa
 aaa
-wzq
+raK
 acm
 aaa
 acm
@@ -127346,11 +127346,11 @@ bUz
 bwu
 akK
 bVn
-wzq
+raK
 aaa
 aaa
 aaa
-wzq
+raK
 acm
 aaQ
 cow
@@ -127603,11 +127603,11 @@ bwu
 akK
 acm
 bUG
-wzq
-wzq
-wzq
-wzq
-wzq
+raK
+raK
+raK
+raK
+raK
 bUG
 aaa
 cow

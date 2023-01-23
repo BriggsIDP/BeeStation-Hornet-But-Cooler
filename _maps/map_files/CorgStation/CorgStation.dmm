@@ -8122,6 +8122,9 @@
 	},
 /turf/open/floor/plasteel,
 /area/storage/tools)
+"cvO" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "cvP" = (
 /turf/closed/wall,
 /area/maintenance/solars/port/fore)
@@ -16718,6 +16721,18 @@
 /obj/structure/cable/yellow,
 /turf/open/floor/plating,
 /area/quartermaster/office)
+"fua" = (
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/corg;
+	width = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "fub" = (
 /obj/structure/sign/warning/securearea{
 	pixel_x = 32
@@ -32564,18 +32579,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners/contrasted,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/service)
-"kHG" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/delta;
-	width = 9
-	},
-/turf/open/floor/plasteel/dark,
-/area/space)
 "kHY" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -40318,9 +40321,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/gateway)
-"niN" = (
-/turf/open/floor/plasteel/dark,
-/area/space)
 "njl" = (
 /obj/machinery/atmospherics/pipe/manifold/green/visible,
 /obj/structure/cable{
@@ -48298,18 +48298,6 @@
 /obj/effect/turf_decal/tile/yellow/fourcorners/contrasted,
 /turf/open/floor/plasteel,
 /area/storage/tools)
-"pSH" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/corg;
-	width = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/space)
 "pSO" = (
 /obj/machinery/camera/autoname{
 	dir = 4
@@ -56871,6 +56859,18 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/cmo)
+"sIZ" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/delta;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "sJj" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
@@ -115222,16 +115222,16 @@ oya
 jKY
 aFG
 aMT
-niN
-niN
-niN
-niN
-pSH
-niN
-niN
-niN
-niN
-niN
+cvO
+cvO
+cvO
+cvO
+fua
+cvO
+cvO
+cvO
+cvO
+cvO
 aMT
 fOv
 ivK
@@ -115479,7 +115479,7 @@ xVp
 mHo
 oRA
 aMT
-niN
+cvO
 aMT
 aMT
 aMT
@@ -115488,7 +115488,7 @@ aMT
 aMT
 aMT
 aMT
-niN
+cvO
 aMT
 fOv
 ivK
@@ -115736,7 +115736,7 @@ iRh
 iRh
 oRA
 aMT
-niN
+cvO
 aMT
 aMT
 aMT
@@ -115745,7 +115745,7 @@ aMT
 aMT
 aMT
 aMT
-niN
+cvO
 aMT
 fOv
 fOv
@@ -115993,7 +115993,7 @@ lJh
 iRh
 aMT
 aMT
-niN
+cvO
 aMT
 aMT
 aMT
@@ -116002,7 +116002,7 @@ aMT
 aMT
 aMT
 aMT
-niN
+cvO
 aMT
 fOv
 vre
@@ -116250,16 +116250,16 @@ htP
 iRh
 aMT
 aMT
-niN
-niN
-niN
-niN
-niN
-niN
-kHG
-niN
-niN
-niN
+cvO
+cvO
+cvO
+cvO
+cvO
+cvO
+sIZ
+cvO
+cvO
+cvO
 aMT
 fOv
 lcq
