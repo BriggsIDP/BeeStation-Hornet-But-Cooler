@@ -8583,18 +8583,6 @@
 	},
 /turf/open/floor/plating,
 /area/science/mixing/chamber)
-"ccU" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 4;
-	height = 5;
-	id = "mining_home";
-	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/fland;
-	width = 9
-	},
-/turf/open/floor/plasteel/dark,
-/area/space)
 "ccZ" = (
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/bot,
@@ -33800,17 +33788,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
-"iCp" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 6;
-	height = 7;
-	id = "supply_home";
-	name = "Cargo Bay";
-	width = 12
-	},
-/turf/open/floor/plasteel/dark,
-/area/space)
 "iCs" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -53131,6 +53108,18 @@
 	},
 /turf/open/floor/carpet/grimy,
 /area/crew_quarters/locker)
+"nBu" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 4;
+	height = 5;
+	id = "mining_home";
+	name = "mining shuttle bay";
+	roundstart_template = /datum/map_template/shuttle/mining/fland;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "nBx" = (
 /obj/machinery/vending/autodrobe/all_access,
 /obj/machinery/light/small{
@@ -63881,9 +63870,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/gateway)
-"qnS" = (
-/turf/open/floor/plasteel/dark,
-/area/space)
 "qnZ" = (
 /obj/structure/lattice/catwalk/over,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -79015,6 +79001,17 @@
 /obj/item/restraints/handcuffs,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"uad" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 6;
+	height = 7;
+	id = "supply_home";
+	name = "Cargo Bay";
+	width = 12
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "uaf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -80829,6 +80826,9 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/port)
+"uwq" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "uwt" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
@@ -122054,18 +122054,18 @@ awl
 pXy
 xTz
 vLM
-qnS
-qnS
-qnS
-qnS
-qnS
-qnS
-qnS
-qnS
-qnS
-qnS
-qnS
-qnS
+uwq
+uwq
+uwq
+uwq
+uwq
+uwq
+uwq
+uwq
+uwq
+uwq
+uwq
+uwq
 vLM
 nnx
 nnx
@@ -122311,7 +122311,7 @@ nXa
 vbd
 dQY
 vLM
-qnS
+uwq
 nnx
 nnx
 nnx
@@ -122322,7 +122322,7 @@ nnx
 nnx
 nnx
 nnx
-qnS
+uwq
 vLM
 nnx
 nnx
@@ -122568,7 +122568,7 @@ muq
 lrw
 vux
 csJ
-qnS
+uwq
 nnx
 nnx
 nnx
@@ -122579,7 +122579,7 @@ nnx
 nnx
 nnx
 nnx
-qnS
+uwq
 csJ
 nnx
 ajY
@@ -122825,7 +122825,7 @@ jXw
 xTM
 xTM
 csJ
-qnS
+uwq
 nnx
 nnx
 nnx
@@ -122836,7 +122836,7 @@ nnx
 nnx
 nnx
 nnx
-qnS
+uwq
 csJ
 nnx
 nnx
@@ -123082,7 +123082,7 @@ qHa
 wkj
 xTz
 csJ
-qnS
+uwq
 nnx
 nnx
 nnx
@@ -123093,7 +123093,7 @@ nnx
 nnx
 nnx
 nnx
-qnS
+uwq
 csJ
 nnx
 nnx
@@ -123339,7 +123339,7 @@ iut
 llc
 dQY
 vLM
-qnS
+uwq
 nnx
 nnx
 nnx
@@ -123350,7 +123350,7 @@ nnx
 nnx
 nnx
 nnx
-qnS
+uwq
 vLM
 nnx
 nnx
@@ -123596,18 +123596,18 @@ kSN
 bso
 vux
 vLM
-qnS
-qnS
-qnS
-qnS
-qnS
-iCp
-qnS
-qnS
-qnS
-qnS
-qnS
-qnS
+uwq
+uwq
+uwq
+uwq
+uwq
+uad
+uwq
+uwq
+uwq
+uwq
+uwq
+uwq
 vLM
 nnx
 nnx
@@ -126687,11 +126687,11 @@ wZH
 jyO
 nnx
 csJ
-qnS
-qnS
-qnS
-qnS
-qnS
+uwq
+uwq
+uwq
+uwq
+uwq
 csJ
 nnx
 nnx
@@ -126944,11 +126944,11 @@ oBG
 jyO
 nnx
 wMM
-qnS
+uwq
 nnx
 nnx
 nnx
-qnS
+uwq
 csJ
 nnx
 nnx
@@ -127201,11 +127201,11 @@ wZH
 xdN
 nnx
 csJ
-qnS
+uwq
 nnx
 nnx
 nnx
-qnS
+uwq
 csJ
 nnx
 nnx
@@ -127458,11 +127458,11 @@ wZH
 oBG
 oBG
 wZH
-qnS
+uwq
 nnx
 nnx
 nnx
-qnS
+uwq
 csJ
 nnx
 nnx
@@ -127715,11 +127715,11 @@ pLF
 xeN
 fvZ
 qTL
-ccU
+nBu
 nnx
 nnx
 nnx
-qnS
+uwq
 csJ
 nnx
 nnx
@@ -127972,11 +127972,11 @@ wZH
 xzJ
 uxV
 hKV
-qnS
+uwq
 nnx
 nnx
 nnx
-qnS
+uwq
 wMM
 nnx
 nnx
@@ -128229,11 +128229,11 @@ mVd
 oBG
 oBG
 wZH
-qnS
+uwq
 nnx
 nnx
 nnx
-qnS
+uwq
 csJ
 nnx
 nnx
@@ -128486,11 +128486,11 @@ wZH
 jyO
 nnx
 csJ
-qnS
+uwq
 nnx
 nnx
 nnx
-qnS
+uwq
 csJ
 nnx
 nnx
@@ -128743,11 +128743,11 @@ wZH
 jyO
 jyO
 csJ
-qnS
-qnS
-qnS
-qnS
-qnS
+uwq
+uwq
+uwq
+uwq
+uwq
 csJ
 nnx
 nnx

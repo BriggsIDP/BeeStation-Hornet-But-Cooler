@@ -53718,6 +53718,9 @@
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
+"jaY" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "jbf" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 4
@@ -72013,6 +72016,18 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
+"psL" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/delta;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "psN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/effect/turf_decal/tile/neutral{
@@ -77647,9 +77662,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
-"rle" = (
-/turf/open/floor/plasteel/dark,
-/area/space)
 "rlD" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
@@ -82153,6 +82165,18 @@
 	heat_capacity = 1e+006
 	},
 /area/crew_quarters/dorms)
+"sQJ" = (
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 3;
+	height = 5;
+	id = "mining_home";
+	name = "mining shuttle bay";
+	roundstart_template = /datum/map_template/shuttle/mining/delta;
+	width = 7
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "sQL" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -93460,18 +93484,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners/contrasted,
 /turf/open/floor/plasteel,
 /area/medical/morgue)
-"wZb" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 3;
-	height = 5;
-	id = "mining_home";
-	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/delta;
-	width = 7
-	},
-/turf/open/floor/plasteel/dark,
-/area/space)
 "wZk" = (
 /obj/structure/closet/crate/critter,
 /obj/effect/turf_decal/tile/purple,
@@ -94543,18 +94555,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners/contrasted,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
-"xtA" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/delta;
-	width = 9
-	},
-/turf/open/floor/plasteel/dark,
-/area/space)
 "xtF" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -144348,16 +144348,16 @@ bkf
 aaa
 aaa
 aaa
-rle
-rle
-rle
-rle
-rle
-rle
-rle
-rle
-rle
-rle
+jaY
+jaY
+jaY
+jaY
+jaY
+jaY
+jaY
+jaY
+jaY
+jaY
 bHr
 wHL
 wyw
@@ -144596,25 +144596,25 @@ xHG
 aXG
 aZi
 aad
-rle
-rle
-rle
-wZb
-rle
-rle
-rle
+jaY
+jaY
+jaY
+sQJ
+jaY
+jaY
+jaY
 aaa
 aaa
-rle
-aaa
-aaa
-aaa
+jaY
 aaa
 aaa
 aaa
 aaa
 aaa
-rle
+aaa
+aaa
+aaa
+jaY
 bHs
 nEJ
 bCM
@@ -144853,25 +144853,25 @@ xVZ
 aXH
 aQS
 aad
-rle
+jaY
 aaa
 aaa
 aaa
 aaa
 aaa
-rle
+jaY
 aaa
 aaa
-rle
-aaa
-aaa
-aaa
+jaY
 aaa
 aaa
 aaa
 aaa
 aaa
-rle
+aaa
+aaa
+aaa
+jaY
 bHs
 kjG
 qcP
@@ -145110,25 +145110,25 @@ aQQ
 aXI
 aZj
 aad
-rle
+jaY
 aaa
 aaa
 aaa
 aaa
 aaa
-rle
+jaY
 aaa
 aaa
-rle
-aaa
-aaa
-aaa
+jaY
 aaa
 aaa
 aaa
 aaa
 aaa
-rle
+aaa
+aaa
+aaa
+jaY
 bHr
 eQv
 xsN
@@ -145367,25 +145367,25 @@ aaa
 aad
 aad
 aad
-rle
+jaY
 aaa
 aaa
 aaa
 aaa
 aaa
-rle
+jaY
 aaa
 aaa
-rle
-rle
-rle
-rle
-rle
-rle
-xtA
-rle
-rle
-rle
+jaY
+jaY
+jaY
+jaY
+jaY
+jaY
+psL
+jaY
+jaY
+jaY
 bHr
 bHr
 uLV
@@ -145624,13 +145624,13 @@ aad
 aad
 aaa
 aaa
-rle
-rle
-rle
-rle
-rle
-rle
-rle
+jaY
+jaY
+jaY
+jaY
+jaY
+jaY
+jaY
 aaa
 aaa
 aaa
