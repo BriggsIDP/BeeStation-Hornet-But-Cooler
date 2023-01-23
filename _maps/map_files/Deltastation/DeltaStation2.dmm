@@ -11041,18 +11041,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
-"bgU" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 3;
-	height = 5;
-	id = "mining_home";
-	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/delta;
-	width = 7
-	},
-/turf/open/space/basic,
-/area/space)
 "bgW" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -14861,18 +14849,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/security/nuke_storage)
-"bAc" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/delta;
-	width = 9
-	},
-/turf/open/space/basic,
-/area/space)
 "bAd" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -51201,6 +51177,18 @@
 /obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
+"hYx" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/delta;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "hYT" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -51552,6 +51540,9 @@
 /obj/effect/turf_decal/tile/red/half/contrasted,
 /turf/open/floor/plasteel,
 /area/security/brig)
+"iek" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "ies" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -59942,6 +59933,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/toilet/restrooms)
+"liA" = (
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 3;
+	height = 5;
+	id = "mining_home";
+	name = "mining shuttle bay";
+	roundstart_template = /datum/map_template/shuttle/mining/delta;
+	width = 7
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "liJ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
@@ -144345,16 +144348,16 @@ bkf
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+iek
+iek
+iek
+iek
+iek
+iek
+iek
+iek
+iek
+iek
 bHr
 wHL
 wyw
@@ -144593,25 +144596,25 @@ xHG
 aXG
 aZi
 aad
+iek
+iek
+iek
+liA
+iek
+iek
+iek
 aaa
 aaa
-aaa
-bgU
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+iek
 aaa
 aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+iek
 bHs
 nEJ
 bCM
@@ -144850,6 +144853,16 @@ xVZ
 aXH
 aQS
 aad
+iek
+aaa
+aaa
+aaa
+aaa
+aaa
+iek
+aaa
+aaa
+iek
 aaa
 aaa
 aaa
@@ -144858,17 +144871,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+iek
 bHs
 kjG
 qcP
@@ -145107,6 +145110,16 @@ aQQ
 aXI
 aZj
 aad
+iek
+aaa
+aaa
+aaa
+aaa
+aaa
+iek
+aaa
+aaa
+iek
 aaa
 aaa
 aaa
@@ -145115,17 +145128,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+iek
 bHr
 eQv
 xsN
@@ -145364,25 +145367,25 @@ aaa
 aad
 aad
 aad
+iek
 aaa
 aaa
 aaa
 aaa
 aaa
+iek
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-bAc
-aaa
-aaa
-aaa
+iek
+iek
+iek
+iek
+iek
+iek
+hYx
+iek
+iek
+iek
 bHr
 bHr
 uLV
@@ -145621,13 +145624,13 @@ aad
 aad
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+iek
+iek
+iek
+iek
+iek
+iek
+iek
 aaa
 aaa
 aaa

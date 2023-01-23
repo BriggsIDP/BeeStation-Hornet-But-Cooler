@@ -62858,18 +62858,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/shuttledock)
-"bUU" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/kilo;
-	width = 9
-	},
-/turf/open/space,
-/area/space)
 "bUV" = (
 /obj/effect/turf_decal/stripes/corner,
 /obj/effect/turf_decal/stripes/corner{
@@ -94307,6 +94295,18 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
+"hQs" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/kilo;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "hQu" = (
 /obj/structure/girder/displaced,
 /obj/structure/grille/broken,
@@ -101505,6 +101505,9 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/starboard)
+"wzq" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "wAy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
@@ -125544,11 +125547,11 @@ anh
 bwu
 acm
 bUG
-aaa
-aaa
-aaa
-aaa
-aaa
+wzq
+wzq
+wzq
+wzq
+wzq
 bUG
 aaa
 aaa
@@ -125801,11 +125804,11 @@ cLh
 akK
 bwu
 bVn
+wzq
 aaa
 aaa
 aaa
-aaa
-aaa
+wzq
 acm
 aaa
 aaa
@@ -126058,11 +126061,11 @@ cLi
 bGL
 bUR
 cxs
+wzq
 aaa
 aaa
 aaa
-aaa
-aaa
+wzq
 acm
 aaa
 aaQ
@@ -126315,11 +126318,11 @@ cLj
 anh
 anh
 anh
+wzq
 aaa
 aaa
 aaa
-aaa
-aaa
+wzq
 acm
 aaa
 cow
@@ -126572,11 +126575,11 @@ cLk
 akK
 acm
 bUG
+wzq
 aaa
 aaa
 aaa
-aaa
-aaa
+wzq
 bUG
 acm
 cow
@@ -126829,11 +126832,11 @@ cno
 anh
 anh
 anh
+wzq
 aaa
 aaa
 aaa
-aaa
-aaa
+wzq
 acm
 aaa
 cow
@@ -127086,11 +127089,11 @@ cnp
 bUP
 bDf
 cxz
-bUU
+hQs
 aaa
 aaa
 aaa
-aaa
+wzq
 acm
 aaa
 acm
@@ -127343,11 +127346,11 @@ bUz
 bwu
 akK
 bVn
+wzq
 aaa
 aaa
 aaa
-aaa
-aaa
+wzq
 acm
 aaQ
 cow
@@ -127600,11 +127603,11 @@ bwu
 akK
 acm
 bUG
-aaa
-aaa
-aaa
-aaa
-aaa
+wzq
+wzq
+wzq
+wzq
+wzq
 bUG
 aaa
 cow

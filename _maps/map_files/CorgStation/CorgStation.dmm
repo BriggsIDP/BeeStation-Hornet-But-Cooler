@@ -32564,6 +32564,18 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners/contrasted,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/service)
+"kHG" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/delta;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "kHY" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -34539,18 +34551,6 @@
 "lrx" = (
 /turf/open/floor/circuit/red,
 /area/hallway/secondary/entry)
-"lrA" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/corg;
-	width = 8
-	},
-/turf/open/space/basic,
-/area/space)
 "lrJ" = (
 /obj/machinery/holopad,
 /obj/effect/turf_decal/delivery,
@@ -40318,6 +40318,9 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/gateway)
+"niN" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "njl" = (
 /obj/machinery/atmospherics/pipe/manifold/green/visible,
 /obj/structure/cable{
@@ -48295,6 +48298,18 @@
 /obj/effect/turf_decal/tile/yellow/fourcorners/contrasted,
 /turf/open/floor/plasteel,
 /area/storage/tools)
+"pSH" = (
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/corg;
+	width = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "pSO" = (
 /obj/machinery/camera/autoname{
 	dir = 4
@@ -115207,16 +115222,16 @@ oya
 jKY
 aFG
 aMT
-aMT
-aMT
-aMT
-aMT
-lrA
-aMT
-aMT
-aMT
-aMT
-aMT
+niN
+niN
+niN
+niN
+pSH
+niN
+niN
+niN
+niN
+niN
 aMT
 fOv
 ivK
@@ -115464,6 +115479,7 @@ xVp
 mHo
 oRA
 aMT
+niN
 aMT
 aMT
 aMT
@@ -115472,8 +115488,7 @@ aMT
 aMT
 aMT
 aMT
-aMT
-aMT
+niN
 aMT
 fOv
 ivK
@@ -115721,6 +115736,7 @@ iRh
 iRh
 oRA
 aMT
+niN
 aMT
 aMT
 aMT
@@ -115729,8 +115745,7 @@ aMT
 aMT
 aMT
 aMT
-aMT
-aMT
+niN
 aMT
 fOv
 fOv
@@ -115978,6 +115993,7 @@ lJh
 iRh
 aMT
 aMT
+niN
 aMT
 aMT
 aMT
@@ -115986,8 +116002,7 @@ aMT
 aMT
 aMT
 aMT
-aMT
-aMT
+niN
 aMT
 fOv
 vre
@@ -116235,16 +116250,16 @@ htP
 iRh
 aMT
 aMT
-aMT
-aMT
-aMT
-aMT
-aMT
-aMT
-aMT
-aMT
-aMT
-aMT
+niN
+niN
+niN
+niN
+niN
+niN
+kHG
+niN
+niN
+niN
 aMT
 fOv
 lcq

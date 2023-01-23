@@ -17516,18 +17516,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
-"exE" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 4;
-	height = 5;
-	id = "mining_home";
-	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/fland;
-	width = 9
-	},
-/turf/open/space/basic,
-/area/space)
 "exI" = (
 /obj/structure/table,
 /obj/item/circuitboard/machine/paystand,
@@ -48309,6 +48297,17 @@
 	dir = 8
 	},
 /area/ai_monitored/storage/eva)
+"mrH" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 6;
+	height = 7;
+	id = "supply_home";
+	name = "Cargo Bay";
+	width = 12
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "mrK" = (
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
@@ -67348,17 +67347,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/storage/tools)
-"rih" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 6;
-	height = 7;
-	id = "supply_home";
-	name = "Cargo Bay";
-	width = 12
-	},
-/turf/open/space/basic,
-/area/space)
 "rim" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/yellow{
@@ -73494,6 +73482,9 @@
 	},
 /turf/open/floor/carpet/red,
 /area/crew_quarters/heads/hos)
+"sEl" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "sEo" = (
 /obj/item/toy/beach_ball/holoball,
 /obj/effect/turf_decal/bot,
@@ -79074,6 +79065,18 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/main)
+"uba" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 4;
+	height = 5;
+	id = "mining_home";
+	name = "mining shuttle bay";
+	roundstart_template = /datum/map_template/shuttle/mining/fland;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "ubb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -122051,18 +122054,18 @@ awl
 pXy
 xTz
 vLM
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
+sEl
+sEl
+sEl
+sEl
+sEl
+sEl
+sEl
+sEl
+sEl
+sEl
+sEl
+sEl
 vLM
 nnx
 nnx
@@ -122308,6 +122311,7 @@ nXa
 vbd
 dQY
 vLM
+sEl
 nnx
 nnx
 nnx
@@ -122318,8 +122322,7 @@ nnx
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 vLM
 nnx
 nnx
@@ -122565,6 +122568,7 @@ muq
 lrw
 vux
 csJ
+sEl
 nnx
 nnx
 nnx
@@ -122575,8 +122579,7 @@ nnx
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 csJ
 nnx
 ajY
@@ -122822,6 +122825,7 @@ jXw
 xTM
 xTM
 csJ
+sEl
 nnx
 nnx
 nnx
@@ -122832,8 +122836,7 @@ nnx
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 csJ
 nnx
 nnx
@@ -123079,6 +123082,7 @@ qHa
 wkj
 xTz
 csJ
+sEl
 nnx
 nnx
 nnx
@@ -123089,8 +123093,7 @@ nnx
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 csJ
 nnx
 nnx
@@ -123336,6 +123339,7 @@ iut
 llc
 dQY
 vLM
+sEl
 nnx
 nnx
 nnx
@@ -123346,8 +123350,7 @@ nnx
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 vLM
 nnx
 nnx
@@ -123593,18 +123596,18 @@ kSN
 bso
 vux
 vLM
-nnx
-nnx
-nnx
-nnx
-nnx
-rih
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
+sEl
+sEl
+sEl
+sEl
+sEl
+mrH
+sEl
+sEl
+sEl
+sEl
+sEl
+sEl
 vLM
 nnx
 nnx
@@ -126684,11 +126687,11 @@ wZH
 jyO
 nnx
 csJ
-nnx
-nnx
-nnx
-nnx
-nnx
+sEl
+sEl
+sEl
+sEl
+sEl
 csJ
 nnx
 nnx
@@ -126941,11 +126944,11 @@ oBG
 jyO
 nnx
 wMM
+sEl
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 csJ
 nnx
 nnx
@@ -127198,11 +127201,11 @@ wZH
 xdN
 nnx
 csJ
+sEl
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 csJ
 nnx
 nnx
@@ -127455,11 +127458,11 @@ wZH
 oBG
 oBG
 wZH
+sEl
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 csJ
 nnx
 nnx
@@ -127712,11 +127715,11 @@ pLF
 xeN
 fvZ
 qTL
-exE
+uba
 nnx
 nnx
 nnx
-nnx
+sEl
 csJ
 nnx
 nnx
@@ -127969,11 +127972,11 @@ wZH
 xzJ
 uxV
 hKV
+sEl
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 wMM
 nnx
 nnx
@@ -128226,11 +128229,11 @@ mVd
 oBG
 oBG
 wZH
+sEl
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 csJ
 nnx
 nnx
@@ -128483,11 +128486,11 @@ wZH
 jyO
 nnx
 csJ
+sEl
 nnx
 nnx
 nnx
-nnx
-nnx
+sEl
 csJ
 nnx
 nnx
@@ -128740,11 +128743,11 @@ wZH
 jyO
 jyO
 csJ
-nnx
-nnx
-nnx
-nnx
-nnx
+sEl
+sEl
+sEl
+sEl
+sEl
 csJ
 nnx
 nnx

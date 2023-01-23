@@ -2480,18 +2480,6 @@
 /obj/effect/decal/cleanable/food/egg_smudge,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
-"anO" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 5;
-	id = "laborcamp_home";
-	name = "fore bay 1";
-	roundstart_template = /datum/map_template/shuttle/labour/box;
-	width = 9
-	},
-/turf/open/space/basic,
-/area/space)
 "anQ" = (
 /obj/structure/sign/warning/electricshock{
 	pixel_y = 32
@@ -45015,6 +45003,9 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
+"pxj" = (
+/turf/open/floor/plasteel/dark,
+/area/space)
 "pxn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
@@ -48215,6 +48206,27 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+"raU" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/box;
+	width = 9
+	},
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 5;
+	id = "laborcamp_home";
+	name = "fore bay 1";
+	roundstart_template = /datum/map_template/shuttle/labour/delta;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/space)
 "rbg" = (
 /obj/machinery/door/airlock/external{
 	req_access_txt = "13"
@@ -84228,16 +84240,16 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pxj
+pxj
+pxj
+pxj
+pxj
+pxj
+pxj
+pxj
+pxj
+pxj
 aaa
 aaa
 aaa
@@ -84485,6 +84497,7 @@ aaa
 aaa
 aaa
 aaa
+pxj
 aaa
 aaa
 aaa
@@ -84493,8 +84506,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+pxj
 aaa
 aaa
 aaf
@@ -84742,6 +84754,7 @@ aaa
 aaa
 aaa
 aaa
+pxj
 aaa
 aaa
 aaa
@@ -84750,8 +84763,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+pxj
 aaa
 aaa
 aaf
@@ -84999,6 +85011,7 @@ aaa
 aaa
 aaa
 aaa
+pxj
 aaa
 aaa
 aaa
@@ -85007,8 +85020,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+pxj
 aaa
 arP
 arP
@@ -85256,16 +85268,16 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-anO
-aaa
-aaa
-aaa
+pxj
+pxj
+pxj
+pxj
+pxj
+pxj
+raU
+pxj
+pxj
+pxj
 aaa
 arP
 asQ
