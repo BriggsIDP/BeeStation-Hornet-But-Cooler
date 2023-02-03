@@ -46429,6 +46429,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
+"gpE" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/plasteel,
+/area/science/storage)
 "gpS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -130032,7 +130037,7 @@ dHl
 oaZ
 dJZ
 dKF
-dLZ
+gpE
 dLZ
 olS
 dOT
