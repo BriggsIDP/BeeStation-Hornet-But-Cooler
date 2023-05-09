@@ -127,7 +127,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 		'sound/items/crowbar.ogg',
 		'sound/items/deconstruct.ogg',
 		'sound/ambience/source_holehit3.ogg',
-		'sound/ambience/cavesound3.ogg',
+		'sound/ambience/department/mining/cavesound3.ogg',
 	)
 	min_ambience_cooldown = 20 SECONDS
 	max_ambience_cooldown = 35 SECONDS
@@ -1133,7 +1133,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/detectives_office
 	name = "Detective's Office"
 	icon_state = "detective"
-	ambientsounds = list('sound/ambience/ambidet1.ogg','sound/ambience/ambidet2.ogg','sound/ambience/ambidet3.ogg','sound/ambience/ambidet4.ogg')
+	ambientsounds = list('sound/ambience/department/det/ambi-det1.ogg','sound/ambience/department/det/ambi-det2.ogg','sound/ambience/department/det/ambi-det3.ogg','sound/ambience/department/det/ambi-det4.ogg')
 
 /area/security/detectives_office/private_investigators_office
 	name = "Private Investigator's Office"
@@ -1535,7 +1535,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	//Turret_protected
 
 /area/ai_monitored/turret_protected
-	ambientsounds = list('sound/ambience/ambimalf.ogg', 'sound/ambience/ambitech.ogg', 'sound/ambience/ambitech2.ogg', 'sound/ambience/ambiatmos.ogg', 'sound/ambience/ambiatmos2.ogg')
+	ambientsounds = list('sound/ambience/department/ai/ambi-AI.ogg', 'sound/ambience/ambi-tech.ogg', 'sound/ambience/ambi-tech2.ogg', 'sound/ambience/ambi-atmos.ogg', 'sound/ambience/ambi-atmos2.ogg')
 
 /area/ai_monitored/turret_protected/ai_upload
 	name = "AI Upload Chamber"
@@ -1602,8 +1602,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/tcommsat
 	clockwork_warp_allowed = FALSE
 	clockwork_warp_fail = "For safety reasons, warping here is disallowed; the radio and bluespace noise could cause catastrophic results."
-	ambientsounds = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg', 'sound/ambience/ambitech.ogg',\
-											'sound/ambience/ambitech2.ogg', 'sound/ambience/ambitech3.ogg', 'sound/ambience/ambimystery.ogg')
+	ambientsounds = list('sound/ambience/ambi-sin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambi-gen10.ogg', 'sound/ambience/ambi-tech.ogg',\
+											'sound/ambience/ambi-tech2.ogg', 'sound/ambience/ambi-tech3.ogg', 'sound/ambience/ambi-mystery.ogg')
 	network_root_id = STATION_NETWORK_ROOT	// They should of unpluged the router before they left
 	airlock_hack_difficulty = AIRLOCK_WIRE_SECURITY_ELITE
 

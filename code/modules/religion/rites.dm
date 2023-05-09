@@ -685,7 +685,7 @@
 	for(var/i in 1 to 8)
 		var/mob/living/simple_animal/S = create_random_mob(altar_turf, FRIENDLY_SPAWN)
 		S.faction |= "neutral"
-	playsound(altar_turf, 'sound/ambience/servicebell.ogg', 25, TRUE)
+	playsound(altar_turf, 'sound/items/servicebell.ogg', 25, TRUE)
 	if(prob(0.1))
 		playsound(altar_turf, 'sound/effects/bamf.ogg', 100, TRUE)
 		altar_turf.visible_message("<span class='boldwarning'>A large form seems to be forcing its way into your reality via the portal [user] opened! RUN!!!</span>")

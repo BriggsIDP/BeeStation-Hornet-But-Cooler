@@ -1,104 +1,106 @@
 GLOBAL_LIST_INIT(generic_ambience,list(
-	'sound/ambience/ambigen1.ogg',
-	'sound/ambience/ambigen3.ogg',
-	'sound/ambience/ambigen4.ogg',
-	'sound/ambience/ambigen5.ogg',
-	'sound/ambience/ambigen6.ogg',
-	'sound/ambience/ambigen7.ogg',
-	'sound/ambience/ambigen8.ogg',
-	'sound/ambience/ambigen9.ogg',
-	'sound/ambience/ambigen10.ogg',
-	'sound/ambience/ambigen11.ogg',
-	'sound/ambience/ambigen12.ogg',
-	'sound/ambience/ambigen14.ogg',
-	'sound/ambience/ambigen15.ogg',
+	'sound/ambience/ambi-gen1.ogg',
+	'sound/ambience/ambi-gen3.ogg',
+	'sound/ambience/ambi-gen4.ogg',
+	'sound/ambience/ambi-gen5.ogg',
+	'sound/ambience/ambi-gen6.ogg',
+	'sound/ambience/ambi-gen7.ogg',
+	'sound/ambience/ambi-gen8.ogg',
+	'sound/ambience/ambi-gen9.ogg',
+	'sound/ambience/ambi-gen10.ogg',
+	'sound/ambience/ambi-gen11.ogg',
+	'sound/ambience/ambi-gen12.ogg',
+	'sound/ambience/ambi-gen14.ogg',
+	'sound/ambience/ambi-gen15.ogg',
 ))
 
 GLOBAL_LIST_INIT(holy_ambience,list(
-	'sound/ambience/ambicha1.ogg',
-	'sound/ambience/ambicha2.ogg',
-	'sound/ambience/ambicha3.ogg',
-	'sound/ambience/ambicha4.ogg',
-	'sound/ambience/ambiholy.ogg',
-	'sound/ambience/ambiholy2.ogg',
-	'sound/ambience/ambiholy3.ogg'
+	'sound/ambience/department/chap/ambi-chap1.ogg',
+	'sound/ambience/department/chap/ambi-chap2.ogg',
+	'sound/ambience/department/chap/ambi-chap3.ogg',
+	'sound/ambience/department/chap/ambi-chap4.ogg',
+	'sound/ambience/department/chap/ambi-holy.ogg',
+	'sound/ambience/department/chap/ambi-holy2.ogg',
+	'sound/ambience/department/chap/ambi-holy3.ogg'
 ))
 
 GLOBAL_LIST_INIT(danger_ambience,list(
-	'sound/ambience/ambidanger.ogg',
-	'sound/ambience/ambidanger2.ogg'
+	'sound/ambience/ambi-danger.ogg',
+	'sound/ambience/ambi-danger2.ogg'
 ))
 
 GLOBAL_LIST_INIT(ruins_ambience,list(
-	'sound/ambience/ambimine.ogg',
-	'sound/ambience/ambicave.ogg',
-	'sound/ambience/ambiruin.ogg',
-	'sound/ambience/ambiruin2.ogg',
-	'sound/ambience/ambiruin3.ogg',
-	'sound/ambience/ambiruin4.ogg',
-	'sound/ambience/ambiruin5.ogg',
-	'sound/ambience/ambiruin6.ogg',
-	'sound/ambience/ambiruin7.ogg',
-	'sound/ambience/ambidanger.ogg',
-	'sound/ambience/ambidanger2.ogg',
-	'sound/ambience/ambitech3.ogg',
-	'sound/ambience/ambimystery.ogg',
-	'sound/ambience/ambimaint1.ogg'
+	'sound/ambience/department/mining/ambi-mine.ogg',
+	'sound/ambience/department/mining/ambi-cave.ogg',
+	'sound/ambience/department/mining/ambi-ruin.ogg',
+	'sound/ambience/department/mining/ambi-ruin2.ogg',
+	'sound/ambience/department/mining/ambi-ruin3.ogg',
+	'sound/ambience/department/mining/ambi-ruin4.ogg',
+	'sound/ambience/department/mining/ambi-ruin5.ogg',
+	'sound/ambience/department/mining/ambi-ruin6.ogg',
+	'sound/ambience/department/mining/ambi-ruin7.ogg',
+	'sound/ambience/ambi-danger.ogg',
+	'sound/ambience/ambi-danger2.ogg',
+	'sound/ambience/ambi-tech3.ogg',
+	'sound/ambience/ambi-mystery.ogg',
+	'sound/ambience/ambi-maint1.ogg'
 ))
 
 GLOBAL_LIST_INIT(engi_ambience,list(
-	'sound/ambience/ambisin1.ogg',
-	'sound/ambience/ambisin2.ogg',
-	'sound/ambience/ambisin3.ogg',
-	'sound/ambience/ambisin4.ogg',
-	'sound/ambience/ambiatmos.ogg',
-	'sound/ambience/ambiatmos2.ogg',
-	'sound/ambience/ambitech.ogg',
-	'sound/ambience/ambitech2.ogg',
-	'sound/ambience/ambitech3.ogg'
+	'sound/ambience/ambi-sin1.ogg',
+	'sound/ambience/ambi-sin2.ogg',
+	'sound/ambience/ambi-sin3.ogg',
+	'sound/ambience/ambi-sin4.ogg',
+	'sound/ambience/ambi-atmos.ogg',
+	'sound/ambience/ambi-atmos2.ogg',
+	'sound/ambience/ambi-tech.ogg',
+	'sound/ambience/ambi-tech2.ogg',
+	'sound/ambience/ambi-tech3.ogg'
 ))
 
 GLOBAL_LIST_INIT(mining_ambience,list(
-	'sound/ambience/ambicave.ogg',
-	'sound/ambience/ambidanger.ogg',
-	'sound/ambience/ambidanger2.ogg',
-	'sound/ambience/ambilava.ogg',
-	'sound/ambience/ambimaint1.ogg',
-	'sound/ambience/ambimine.ogg',
-	'sound/ambience/ambiruin.ogg',
-	'sound/ambience/ambiruin2.ogg',
-	'sound/ambience/ambiruin3.ogg',
-	'sound/ambience/ambiruin4.ogg',
-	'sound/ambience/ambiruin5.ogg',
-	'sound/ambience/ambiruin6.ogg',
-	'sound/ambience/ambiruin7.ogg',
+	'sound/ambience/department/mining/ambi-cave.ogg',
+	'sound/ambience/ambi-danger.ogg',
+	'sound/ambience/ambi-danger2.ogg',
+	'sound/ambience/department/mining/ambi-lava.ogg',
+	'sound/ambience/ambi-maint1.ogg',
+	'sound/ambience/department/mining/ambi-mine.ogg',
+	'sound/ambience/department/mining/ambi-ruin.ogg',
+	'sound/ambience/department/mining/ambi-ruin2.ogg',
+	'sound/ambience/department/mining/ambi-ruin3.ogg',
+	'sound/ambience/department/mining/ambi-ruin4.ogg',
+	'sound/ambience/department/mining/ambi-ruin5.ogg',
+	'sound/ambience/department/mining/ambi-ruin6.ogg',
+	'sound/ambience/department/mining/ambi-ruin7.ogg',
 ))
 
-GLOBAL_LIST_INIT(medical_ambience,list('sound/ambience/ambinice.ogg'))
+GLOBAL_LIST_INIT(medical_ambience,list(
+	'sound/ambience/department/med/ambi-med.ogg'
+))
 
 GLOBAL_LIST_INIT(virology_ambience,list(
-	'sound/ambience/ambiviro.ogg',
-	'sound/ambience/ambiviro1.ogg',
-	'sound/ambience/ambiviro2.ogg',
+	'sound/ambience/department/med/ambi-viro.ogg',
+	'sound/ambience/department/med/ambi-viro1.ogg',
+	'sound/ambience/department/med/ambi-viro2.ogg',
 ))
 
 GLOBAL_LIST_INIT(spooky_ambience,list(
-	'sound/ambience/ambimo1.ogg',
-	'sound/ambience/ambimo2.ogg',
-	'sound/ambience/ambimystery.ogg',
-	'sound/ambience/ambiodd.ogg',
-	'sound/ambience/ambiruin6.ogg',
-	'sound/ambience/ambiruin7.ogg',
+	'sound/ambience/ambi-mo1.ogg',
+	'sound/ambience/ambi-mo2.ogg',
+	'sound/ambience/ambi-mystery.ogg',
+	'sound/ambience/ambi-odd.ogg',
+	'sound/ambience/department/mining/ambi-ruin6.ogg',
+	'sound/ambience/department/mining/ambi-ruin7.ogg',
 ))
 
 GLOBAL_LIST_INIT(maint_ambience,list(
-	'sound/ambience/ambimaint1.ogg',
-	'sound/ambience/ambimaint2.ogg',
-	'sound/ambience/ambimaint3.ogg',
-	'sound/ambience/ambimaint4.ogg',
-	'sound/ambience/ambimaint5.ogg',
-	'sound/ambience/ambitech2.ogg',
-	'sound/ambience/maintambience.ogg',
+	'sound/ambience/ambi-maint1.ogg',
+	'sound/ambience/ambi-maint2.ogg',
+	'sound/ambience/ambi-maint3.ogg',
+	'sound/ambience/ambi-maint4.ogg',
+	'sound/ambience/ambi-maint5.ogg',
+	'sound/ambience/ambi-maint6.ogg',
+	'sound/ambience/ambi-tech2.ogg',
 	'sound/voice/lowHiss1.ogg',
 	'sound/voice/lowHiss2.ogg',
 	'sound/voice/lowHiss3.ogg',
@@ -106,27 +108,27 @@ GLOBAL_LIST_INIT(maint_ambience,list(
 ))
 
 GLOBAL_LIST_INIT(away_ambience,list(
-	'sound/ambience/ambiatmos.ogg',
-	'sound/ambience/ambiatmos2.ogg',
-	'sound/ambience/ambidanger.ogg',
-	'sound/ambience/ambidanger2.ogg',
-	'sound/ambience/ambimaint.ogg',
-	'sound/ambience/ambiodd.ogg',
-	'sound/ambience/ambiruin.ogg',
-	'sound/ambience/ambiruin2.ogg',
-	'sound/ambience/ambiruin3.ogg',
-	'sound/ambience/ambiruin4.ogg',
-	'sound/ambience/ambiruin5.ogg',
-	'sound/ambience/ambiruin6.ogg',
-	'sound/ambience/ambiruin7.ogg',
-	'sound/ambience/ambitech.ogg',
-	'sound/ambience/ambitech2.ogg',
+	'sound/ambience/ambi-atmos.ogg',
+	'sound/ambience/ambi-atmos2.ogg',
+	'sound/ambience/ambi-danger.ogg',
+	'sound/ambience/ambi-danger2.ogg',
+	'sound/ambience/ambi-maint.ogg',
+	'sound/ambience/ambi-odd.ogg',
+	'sound/ambience/department/mining/ambi-ruin.ogg',
+	'sound/ambience/department/mining/ambi-ruin2.ogg',
+	'sound/ambience/department/mining/ambi-ruin3.ogg',
+	'sound/ambience/department/mining/ambi-ruin4.ogg',
+	'sound/ambience/department/mining/ambi-ruin5.ogg',
+	'sound/ambience/department/mining/ambi-ruin6.ogg',
+	'sound/ambience/department/mining/ambi-ruin7.ogg',
+	'sound/ambience/ambi-tech.ogg',
+	'sound/ambience/ambi-tech2.ogg',
 ))
 
 GLOBAL_LIST_INIT(reebe_ambience,list(
-	'sound/ambience/ambireebe1.ogg',
-	'sound/ambience/ambireebe2.ogg',
-	'sound/ambience/ambireebe3.ogg'
+	'sound/ambience/ambi-reebe1.ogg',
+	'sound/ambience/ambi-reebe2.ogg',
+	'sound/ambience/ambi-reebe3.ogg'
 ))
 
 GLOBAL_LIST_INIT(creepy_ambience,list(
@@ -174,11 +176,11 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 
 
 GLOBAL_LIST_INIT(space_ambient_music,list(
-	'sound/ambience/ambispace.ogg',
-	'sound/ambience/ambispace2.ogg',
-	'sound/ambience/qwerty/constellations.ogg',
-	'sound/ambience/qwerty/drifting.ogg',
-	'sound/ambience/qwerty/starlight.ogg',
+	'sound/ambience/space/ambi-space.ogg',
+	'sound/ambience/space/ambi-space2.ogg',
+	'sound/ambience/space/constellations.ogg',
+	'sound/ambience/space/drifting.ogg',
+	'sound/ambience/space/starlight.ogg',
 ))
 
 GLOBAL_LIST_INIT(ambient_music_assoc, list(

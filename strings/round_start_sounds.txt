@@ -1,4 +1,4 @@
-sound/ambience/title1.ogg
-sound/ambience/title2.ogg
-sound/ambience/title3.ogg
-sound/ambience/clown.ogg
+sound/ambience/music/title1.ogg
+sound/ambience/music/title2.ogg
+sound/ambience/music/title3.ogg
+sound/ambience/music/clown.ogg

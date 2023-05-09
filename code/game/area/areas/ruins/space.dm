@@ -48,7 +48,7 @@
 
 /area/ruin/space/has_grav/powered/aesthetic
 	name = "Aesthetic"
-	ambientsounds = list('sound/ambience/ambivapor1.ogg')
+	ambientsounds = list('sound/ambience/unused/ambi-vapor1.ogg')
 
 
 //Ruin of Hotel
@@ -371,7 +371,7 @@
 /area/ruin/space/abandoned_tele
 	name = "Abandoned Teleporter"
 	icon_state = "teleporter"
-	ambientsounds = list('sound/ambience/ambimalf.ogg', 'sound/ambience/signal.ogg')
+	ambientsounds = list('sound/ambience/department/AI/ambi-AI.ogg', 'sound/ambience/signal.ogg')
 
 //OLD AI SAT
 
