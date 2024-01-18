@@ -19156,42 +19156,13 @@
 /area/science/robotics)
 "fZt" = (
 /obj/structure/table,
-/obj/item/storage/box/papersack{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/storage/box/papersack{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/storage/box/papersack{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/storage/box/papersack{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/storage/box/papersack{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/storage/box/papersack{
-	pixel_x = 5;
-	pixel_y = 4
-	},
-/obj/item/storage/box/papersack{
-	pixel_x = 4;
-	pixel_y = 3
-	},
 /obj/machinery/requests_console{
 	department = "Kitchen";
 	departmentType = 2;
 	pixel_y = 30
 	},
-/obj/item/reagent_containers/food/condiment/saltshaker{
-	pixel_x = -9;
-	pixel_y = 5
+/obj/structure/sink/kitchen{
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/kitchen)
@@ -37620,10 +37591,6 @@
 /area/bridge)
 "lYd" = (
 /obj/effect/decal/cleanable/food/flour,
-/obj/item/reagent_containers/food/condiment/peppermill{
-	pixel_x = -9;
-	pixel_y = 44
-	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/kitchen)
 "lYp" = (
@@ -40709,9 +40676,40 @@
 	pixel_y = 1
 	},
 /obj/effect/turf_decal/stripes/corner,
-/obj/item/food/piedough,
 /obj/machinery/light_switch{
 	pixel_x = 21
+	},
+/obj/item/storage/box/papersack{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/storage/box/papersack{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/storage/box/papersack{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/storage/box/papersack{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/storage/box/papersack{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/storage/box/papersack{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/item/storage/box/papersack{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/food/condiment/saltshaker{
+	pixel_x = -9;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/kitchen)
@@ -47305,6 +47303,10 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/item/reagent_containers/food/condiment/peppermill{
+	pixel_x = -9;
+	pixel_y = 44
 	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/kitchen)

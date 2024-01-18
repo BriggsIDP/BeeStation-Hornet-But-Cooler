@@ -359,6 +359,10 @@
 	name = "kitchen sink"
 	icon_state = "sink_alt"
 
+/obj/structure/sink/kitchen
+	name = "kitchen sink"
+	icon_state = "sink_table"
+
 
 /obj/structure/sink/puddle	//splishy splashy ^_^
 	name = "puddle"
