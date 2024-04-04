@@ -314,9 +314,9 @@
 /mob/living/silicon/pai/Process_Spacemove(movement_dir = 0)
 	. = ..()
 	if(!.)
-		add_movespeed_modifier(MOVESPEED_ID_PAI_SPACEWALK_SPEEDMOD, TRUE, 100, multiplicative_slowdown = 2)
+		add_movespeed_modifier(/datum/movespeed_modifier/pai_spacewalk)
 		return TRUE
-	remove_movespeed_modifier(MOVESPEED_ID_PAI_SPACEWALK_SPEEDMOD, TRUE)
+	remove_movespeed_modifier(/datum/movespeed_modifier/pai_spacewalk)
 	return TRUE
 
 /mob/living/silicon/pai/examine(mob/user)
@@ -341,11 +341,12 @@
 /mob/living/silicon/pai/updatehealth()
 	if(status_flags & GODMODE)
 		return
-	health = maxHealth - getBruteLoss() - getFireLoss()
+	set_health(maxHealth - getBruteLoss() - getFireLoss())
 	update_stat()
+	SEND_SIGNAL(src, COMSIG_LIVING_UPDATE_HEALTH)
 
 /mob/living/silicon/pai/process(delta_time)
-	emitterhealth = CLAMP((emitterhealth + (emitterregen * delta_time)), -50, emittermaxhealth)
+	emitterhealth = clamp((emitterhealth + (emitterregen * delta_time)), -50, emittermaxhealth)
 
 /mob/living/silicon/pai/can_interact_with(atom/A)
 	if(A == signaler) // Bypass for signaler

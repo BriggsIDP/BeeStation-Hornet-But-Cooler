@@ -378,7 +378,10 @@
 				parts += "[FOURSPACES][FOURSPACES][entry]<BR>"
 		parts += "[FOURSPACES]Executed rules:"
 		for(var/datum/dynamic_ruleset/rule in mode.executed_rules)
-			parts += "[FOURSPACES][FOURSPACES][rule.ruletype] - <b>[rule.name]</b>: -[rule.cost + rule.scaled_times * rule.scaling_cost] threat"
+			if (rule.lategame_spawned)
+				parts += "[FOURSPACES][FOURSPACES][rule.ruletype] - <b>[rule.name]</b>: -0 threat (Lategame, threat cost ignored)"
+			else
+				parts += "[FOURSPACES][FOURSPACES][rule.ruletype] - <b>[rule.name]</b>: -[rule.cost + rule.scaled_times * rule.scaling_cost] threat"
 	return parts.Join("<br>")
 
 /client/proc/roundend_report_file()
@@ -399,6 +402,8 @@
 	else
 		content = rustg_file_read(filename)
 	roundend_report.set_content(content)
+	roundend_report.scripts = list()
+	roundend_report.add_script("radarchart", 'html/radarchart.js')
 	roundend_report.stylesheets = list()
 	roundend_report.add_stylesheet("roundend", 'html/browser/roundend.css')
 	roundend_report.add_stylesheet("font-awesome", 'html/font-awesome/css/all.min.css')
@@ -669,7 +674,7 @@
 		var/datum/admins/A = GLOB.protected_admins[i]
 		sql_admins += list(list("ckey" = A.target, "rank" = A.rank.name))
 	SSdbcore.MassInsert(format_table_name("admin"), sql_admins, duplicate_key = TRUE)
-	var/datum/DBQuery/query_admin_rank_update = SSdbcore.NewQuery("UPDATE [format_table_name("player")] p INNER JOIN [format_table_name("admin")] a ON p.ckey = a.ckey SET p.lastadminrank = a.rank")
+	var/datum/db_query/query_admin_rank_update = SSdbcore.NewQuery("UPDATE [format_table_name("player")] p INNER JOIN [format_table_name("admin")] a ON p.ckey = a.ckey SET p.lastadminrank = a.rank")
 	query_admin_rank_update.Execute()
 	qdel(query_admin_rank_update)
 
@@ -703,7 +708,7 @@
 		if(!flags.len)
 			continue
 		var/flags_to_check = flags.Join(" != [R_EVERYTHING] AND ") + " != [R_EVERYTHING]"
-		var/datum/DBQuery/query_check_everything_ranks = SSdbcore.NewQuery(
+		var/datum/db_query/query_check_everything_ranks = SSdbcore.NewQuery(
 			"SELECT flags, exclude_flags, can_edit_flags FROM [format_table_name("admin_ranks")] WHERE rank = :rank AND ([flags_to_check])",
 			list("rank" = R.name)
 		)
@@ -712,7 +717,7 @@
 			return
 		if(query_check_everything_ranks.NextRow()) //no row is returned if the rank already has the correct flag value
 			var/flags_to_update = flags.Join(" = [R_EVERYTHING], ") + " = [R_EVERYTHING]"
-			var/datum/DBQuery/query_update_everything_ranks = SSdbcore.NewQuery(
+			var/datum/db_query/query_update_everything_ranks = SSdbcore.NewQuery(
 				"UPDATE [format_table_name("admin_ranks")] SET [flags_to_update] WHERE rank = :rank",
 				list("rank" = R.name)
 			)
@@ -724,29 +729,32 @@
 
 
 /datum/controller/subsystem/ticker/proc/sendtodiscord(var/survivors, var/escapees, var/integrity)
-    var/discordmsg = ""
-    discordmsg += "--------------ROUND END--------------\n"
-    discordmsg += "Server: [CONFIG_GET(string/servername)]\n"
-    discordmsg += "Round Number: [GLOB.round_id]\n"
-    discordmsg += "Duration: [DisplayTimeText(world.time - SSticker.round_start_time)]\n"
-    discordmsg += "Players: [GLOB.player_list.len]\n"
-    discordmsg += "Survivors: [survivors]\n"
-    discordmsg += "Escapees: [escapees]\n"
-    discordmsg += "Integrity: [integrity]\n"
-    discordmsg += "Gamemode: [SSticker.mode.name]\n"
-    if(istype(SSticker.mode, /datum/game_mode/dynamic))
-        var/datum/game_mode/dynamic/mode = SSticker.mode
-        discordmsg += "Threat level: [mode.threat_level]\n"
-        discordmsg += "Threat left: [mode.mid_round_budget]\n"
-        discordmsg += "Executed rules:\n"
-        for(var/datum/dynamic_ruleset/rule in mode.executed_rules)
-            discordmsg += "[rule.ruletype] - [rule.name]: -[rule.cost + rule.scaled_times * rule.scaling_cost] threat\n"
-    var/list/ded = SSblackbox.first_death
-    if(ded)
-        discordmsg += "First Death: [ded["name"]], [ded["role"]], at [ded["area"]]\n"
-        var/last_words = ded["last_words"] ? "Their last words were: \"[ded["last_words"]]\"\n" : "They had no last words.\n"
-        discordmsg += "[last_words]\n"
-    else
-        discordmsg += "Nobody died!\n"
-    discordmsg += "--------------------------------------\n"
-    sendooc2ext(discordmsg)
+	var/discordmsg = ""
+	discordmsg += "--------------ROUND END--------------\n"
+	discordmsg += "Server: [CONFIG_GET(string/servername)]\n"
+	discordmsg += "Round Number: [GLOB.round_id]\n"
+	discordmsg += "Duration: [DisplayTimeText(world.time - SSticker.round_start_time)]\n"
+	discordmsg += "Players: [GLOB.player_list.len]\n"
+	discordmsg += "Survivors: [survivors]\n"
+	discordmsg += "Escapees: [escapees]\n"
+	discordmsg += "Integrity: [integrity]\n"
+	discordmsg += "Gamemode: [SSticker.mode.name]\n"
+	if(istype(SSticker.mode, /datum/game_mode/dynamic))
+		var/datum/game_mode/dynamic/mode = SSticker.mode
+		discordmsg += "Threat level: [mode.threat_level]\n"
+		discordmsg += "Threat left: [mode.mid_round_budget]\n"
+		discordmsg += "Executed rules:\n"
+		for(var/datum/dynamic_ruleset/rule in mode.executed_rules)
+			if (rule.lategame_spawned)
+				discordmsg += "[rule.ruletype] - [rule.name]: -0 threat (Lategame, threat cost ignored)\n"
+			else
+				discordmsg += "[rule.ruletype] - [rule.name]: -[rule.cost + rule.scaled_times * rule.scaling_cost] threat\n"
+	var/list/ded = SSblackbox.first_death
+	if(ded)
+		discordmsg += "First Death: [ded["name"]], [ded["role"]], at [ded["area"]]\n"
+		var/last_words = ded["last_words"] ? "Their last words were: \"[ded["last_words"]]\"\n" : "They had no last words.\n"
+		discordmsg += "[last_words]\n"
+	else
+		discordmsg += "Nobody died!\n"
+	discordmsg += "--------------------------------------\n"
+	sendooc2ext(discordmsg)

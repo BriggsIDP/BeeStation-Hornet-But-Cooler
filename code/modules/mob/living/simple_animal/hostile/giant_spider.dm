@@ -30,7 +30,7 @@
 	speed = 1
 	turns_per_move = 5
 	see_in_dark = 10
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/reagent_containers/food/snacks/spiderleg = 8)
+	butcher_results = list(/obj/item/food/meat/slab/spider = 2, /obj/item/food/spiderleg = 8)
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "hits"
@@ -110,13 +110,13 @@
 /mob/living/simple_animal/hostile/poison/giant_spider/updatehealth()
 	. = ..()
 	if(HAS_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN))
-		remove_movespeed_modifier(MOVESPEED_ID_DAMAGE_SLOWDOWN)
+		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		return
 	var/health_percentage = round((health / maxHealth) * 100)
 	if(health_percentage <= 75)
-		add_movespeed_modifier(MOVESPEED_ID_DAMAGE_SLOWDOWN, override = TRUE, multiplicative_slowdown = ((100 - health_percentage) / 50), blacklisted_movetypes = FLOATING|FLYING)
+		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, multiplicative_slowdown = ((100 - health_percentage) / 50))
 	else
-		remove_movespeed_modifier(MOVESPEED_ID_DAMAGE_SLOWDOWN)
+		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 
 // Handles faster movement on webs
 // This is triggered after the first time a spider steps on/off a web, making web-peeking using this harder
@@ -185,6 +185,7 @@
 				if(isliving(cocoon_target))
 					var/mob/living/L = cocoon_target
 					if(L.stat != DEAD)
+						L.investigate_log("has been killed by being wrapped in a cocoon.", INVESTIGATE_DEATHS)
 						L.death() //If it's not already dead, we want it dead regardless of nourishment
 					if(L.blood_volume >= BLOOD_VOLUME_BAD && !isipc(L)) //IPCs and drained mobs are not nourishing.
 						L.blood_volume = 0 //Remove all fluids from this mob so they are no longer nourishing.
@@ -328,7 +329,11 @@
 	web_speed = 0.25
 
 	gender = FEMALE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/reagent_containers/food/snacks/spiderleg = 8, /obj/item/reagent_containers/food/snacks/spidereggs = 4)
+	butcher_results = list(
+		/obj/item/food/meat/slab/spider = 2,
+		/obj/item/food/spiderleg = 8,
+		/obj/item/food/spidereggs = 4
+	)
 	var/obj/effect/proc_holder/spider/wrap/wrap
 	var/datum/action/innate/spider/set_directive/set_directive
 	/// Allows the spider to use spider comms

@@ -123,10 +123,8 @@ Possible to do for anyone motivated enough:
 	return ..()
 
 /obj/machinery/holopad/power_change()
-	if (powered())
-		set_machine_stat(machine_stat & ~NOPOWER)
-	else
-		set_machine_stat(machine_stat | NOPOWER)
+	. = ..()
+	if (!powered())
 		if(replay_mode)
 			replay_stop()
 		if(record_mode)
@@ -155,9 +153,6 @@ Possible to do for anyone motivated enough:
 		return
 
 	if(default_pry_open(P))
-		return
-
-	if(default_unfasten_wrench(user, P))
 		return
 
 	if(default_deconstruction_crowbar(P))
@@ -404,7 +399,7 @@ Possible to do for anyone motivated enough:
 
 		Hologram.mouse_opacity = MOUSE_OPACITY_TRANSPARENT//So you can't click on it.
 		Hologram.layer = FLY_LAYER//Above all the other objects/mobs. Or the vast majority of them.
-		Hologram.setAnchored(TRUE)//So space wind cannot drag it.
+		Hologram.set_anchored(TRUE)//So space wind cannot drag it.
 		Hologram.name = "[user.name] (Hologram)"//If someone decides to right click.
 		Hologram.set_light(2)	//hologram lighting
 		move_hologram()
@@ -567,7 +562,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	holder.selected_language = record.language
 	Hologram.mouse_opacity = MOUSE_OPACITY_TRANSPARENT//So you can't click on it.
 	Hologram.layer = FLY_LAYER//Above all the other objects/mobs. Or the vast majority of them.
-	Hologram.setAnchored(TRUE)//So space wind cannot drag it.
+	Hologram.set_anchored(TRUE)//So space wind cannot drag it.
 	Hologram.name = "[record.caller_name] (Hologram)"//If someone decides to right click.
 	Hologram.set_light(2)	//hologram lighting
 	visible_message("<span class='notice'>A holographic image of [record.caller_name] flickers to life before your eyes!</span>")
@@ -633,6 +628,10 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 
 /obj/machinery/holopad/proc/replay_entry(entry_number)
 	if(!replay_mode)
+		return
+	if(!anchored || (machine_stat & NOPOWER))
+		record_stop()
+		replay_stop()
 		return
 	if (!disk.record.entries.len) // check for zero entries such as photographs and no text recordings
 		return // and pretty much just display them statically until manually stopped

@@ -123,6 +123,7 @@
 	Unlike regular jetpacks, this device has no stabilization system."
 	slot = ORGAN_SLOT_THRUSTERS
 	icon_state = "imp_jetpack"
+	base_icon_state = "imp_jetpack"
 	implant_overlay = null
 	implant_color = null
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
@@ -153,27 +154,22 @@
 		on = TRUE
 		if(allow_thrust(THRUST_REQUIREMENT_SPACEMOVE))
 			ion_trail.start()
-			RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(move_react))
 			JETPACK_SPEED_CHECK(owner, MOVESPEED_ID_CYBER_THRUSTER, -1, TRUE)
+			RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(move_react))
 			if(!silent)
 				to_chat(owner, "<span class='notice'>You turn your thrusters set on.</span>")
 	else
 		ion_trail.stop()
+		owner.remove_movespeed_modifier(/datum/movespeed_modifier/jetpack/cybernetic)
 		UnregisterSignal(owner, COMSIG_MOVABLE_MOVED)
-		owner.remove_movespeed_modifier(MOVESPEED_ID_CYBER_THRUSTER)
 		if(!silent)
 			to_chat(owner, "<span class='notice'>You turn your thrusters set off.</span>")
 		on = FALSE
 	update_icon()
 
-/obj/item/organ/cyberimp/chest/thrusters/update_icon()
-	if(on)
-		icon_state = "imp_jetpack-on"
-	else
-		icon_state = "imp_jetpack"
-	for(var/X in actions)
-		var/datum/action/A = X
-		A.UpdateButtonIcon()
+/obj/item/organ/cyberimp/chest/thrusters/update_icon_state()
+	icon_state = "[base_icon_state][on ? "-on" : null]"
+	return ..()
 
 /obj/item/organ/cyberimp/chest/thrusters/proc/move_react()
 	SIGNAL_HANDLER

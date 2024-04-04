@@ -51,7 +51,7 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet/thunderdome
 	r_hand = /obj/item/gun/energy/pulse/destroyer
-	l_hand = /obj/item/kitchen/knife
+	l_hand = /obj/item/knife/kitchen
 	r_pocket = /obj/item/grenade/smokebomb
 
 /datum/outfit/tournament/green
@@ -81,7 +81,7 @@
 	l_hand = /obj/item/reagent_containers/glass/bucket
 	r_pocket = /obj/item/grenade/chem_grenade/cleaner
 	l_pocket = /obj/item/grenade/chem_grenade/cleaner
-	backpack_contents = list(/obj/item/stack/tile/plasteel=6)
+	backpack_contents = list(/obj/item/stack/tile/iron=6)
 
 /datum/outfit/tournament/janitor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
@@ -154,7 +154,7 @@
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/thermal/monocle
 	suit = /obj/item/clothing/suit/hooded/chaplain_hoodie
-	l_pocket = /obj/item/reagent_containers/food/snacks/grown/banana
+	l_pocket = /obj/item/food/grown/banana
 	r_pocket = /obj/item/bikehorn
 	id = /obj/item/card/id
 	r_hand = /obj/item/fireaxe
@@ -181,7 +181,7 @@
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/thermal/monocle
 	suit = /obj/item/clothing/suit/apron
-	l_pocket = /obj/item/kitchen/knife
+	l_pocket = /obj/item/knife/kitchen
 	r_pocket = /obj/item/scalpel
 	r_hand = /obj/item/fireaxe
 

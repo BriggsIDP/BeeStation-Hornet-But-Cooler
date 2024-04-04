@@ -16,11 +16,13 @@
 	var/mode = SYRINGE_DRAW
 	var/busy = FALSE		// needed for delayed drawing of blood
 	var/proj_piercing = 0 //does it pierce through thick clothes when shot with syringe gun
-	materials = list(/datum/material/iron=10, /datum/material/glass=20)
+	custom_materials = list(/datum/material/iron=10, /datum/material/glass=20)
 	reagent_flags = TRANSPARENT
 	var/list/datum/disease/syringe_diseases = list()
 	var/units_per_tick = 1.5
 	var/initial_inject = 5
+	fill_icon_state = "syringe"
+	fill_icon_thresholds = list(1, 5, 10, 15)
 
 /obj/item/reagent_containers/syringe/Initialize(mapload)
 	. = ..()
@@ -113,7 +115,8 @@
 				else
 					to_chat(user, "<span class='warning'>You are unable to draw any blood from [L]!</span>")
 					balloon_alert(user, "You are unable to draw any blood from [L]!")
-				transfer_diseases(L)
+				if(CONFIG_GET(flag/biohazards_allowed))
+					transfer_diseases(L)
 
 			else //if not mob
 				if(!target.reagents.total_volume)
@@ -183,7 +186,8 @@
 					log_combat(user, L, "injected", src, addition="which had [contained]")
 				else
 					L.log_message("injected themselves ([contained]) with [src.name]", LOG_ATTACK, color="orange")
-				transfer_diseases(L)
+				if(CONFIG_GET(flag/biohazards_allowed))
+					transfer_diseases(L)
 			var/fraction = min(amount_per_transfer_from_this/reagents.total_volume, 1)
 			reagents.reaction(L, INJECT, fraction)
 			reagents.trans_to(target, amount_per_transfer_from_this, transfered_by = user)
@@ -198,7 +202,7 @@
 	cut_overlays()
 	var/rounded_vol
 	if(reagents?.total_volume)
-		rounded_vol = CLAMP(round((reagents.total_volume / volume * 15),5), 1, 15)
+		rounded_vol = clamp(round((reagents.total_volume / volume * 15),5), 1, 15)
 		var/image/filling_overlay = mutable_appearance('icons/obj/reagentfillings.dmi', "syringe[rounded_vol]")
 		filling_overlay.color = mix_color_from_reagents(reagents.reagent_list)
 		add_overlay(filling_overlay)
@@ -319,6 +323,8 @@
 	base_icon_state = "cryo"
 	volume = 20
 	var/processing = FALSE
+	fill_icon_state = null
+	fill_icon_thresholds = null
 
 /obj/item/reagent_containers/syringe/cryo/Destroy()
 	if(processing)
@@ -358,6 +364,8 @@
 	icon_state = "crude_0"
 	base_icon_state = "crude"
 	volume = 5
+	fill_icon_state = "syringe_crude"
+	fill_icon_thresholds = list(5, 10, 15)
 
 #undef SYRINGE_DRAW
 #undef SYRINGE_INJECT

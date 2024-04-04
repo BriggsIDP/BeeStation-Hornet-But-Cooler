@@ -177,14 +177,14 @@
 		if(!anchored && !isinspace())
 			W.play_tool_sound(src, 100)
 			to_chat(user, "<span class='notice'>You secure \the [src] to the floor!</span>")
-			setAnchored(TRUE)
+			set_anchored(TRUE)
 		else if(anchored)
 			W.play_tool_sound(src, 100)
 			to_chat(user, "<span class='notice'>You unsecure \the [src] from the floor!</span>")
 			if(active)
 				to_chat(user, "<span class='notice'>\The [src] shuts off!</span>")
 				shields_down()
-			setAnchored(FALSE)
+			set_anchored(FALSE)
 
 	else if(W.GetID())
 		if(allowed(user) && !(obj_flags & EMAGGED))
@@ -270,7 +270,7 @@
 	use_stored_power(50)
 
 /obj/machinery/shieldwallgen/proc/use_stored_power(amount)
-	power = CLAMP(power - amount, 0, maximum_stored_power)
+	power = clamp(power - amount, 0, maximum_stored_power)
 	update_activity()
 
 /obj/machinery/shieldwallgen/proc/update_activity()
@@ -425,6 +425,7 @@
 		setDir(get_dir(gen_primary, gen_secondary))
 	for(var/mob/living/L in get_turf(src))
 		visible_message("<span class='danger'>\The [src] is suddenly occupying the same space as \the [L]!</span>")
+		L.investigate_log("has been gibbed by [src].", INVESTIGATE_DEATHS)
 		L.gib()
 	RegisterSignal(src, COMSIG_ATOM_SINGULARITY_TRY_MOVE, PROC_REF(block_singularity))
 

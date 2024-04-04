@@ -14,7 +14,7 @@
 	if(check_click_intercept(params,A))
 		return
 
-	if(stat || lockcharge || IsParalyzed() || IsStun() || IsUnconscious())
+	if(stat || lockcharge || IsParalyzed() || IsStun())
 		return
 
 	var/list/modifiers = params2list(params)
@@ -147,7 +147,7 @@
 	AltClick(user)
 	return
 
-/obj/machinery/door/airlock/BorgAltClick(mob/living/silicon/robot/user) // Eletrifies doors. Forwards to AI code.
+/obj/machinery/door/airlock/BorgAltClick(mob/living/silicon/robot/user) // Electrifies doors. Forwards to AI code.
 	if(get_dist(src,user) <= user.interaction_range)
 		AIAltClick(user)
 	else

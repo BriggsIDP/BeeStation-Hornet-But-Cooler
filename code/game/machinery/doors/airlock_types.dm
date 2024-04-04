@@ -6,7 +6,6 @@
 	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_com
 	normal_integrity = 450
-	security_level = AIRLOCK_SECURITY_PLASTEEL_O_S
 
 /obj/machinery/door/airlock/security
 	icon = 'icons/obj/doors/airlocks/station/security.dmi'
@@ -86,7 +85,6 @@
 	opacity = FALSE
 	glass = TRUE
 	normal_integrity = 400
-	security_level = AIRLOCK_SECURITY_PLASTEEL_O_S
 
 /obj/machinery/door/airlock/engineering/glass
 	opacity = FALSE
@@ -444,7 +442,6 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_highsecurity
 	explosion_block = 2
 	normal_integrity = 500
-	security_level = AIRLOCK_SECURITY_IRON
 	damage_deflection = 30
 
 //////////////////////////////////
@@ -476,7 +473,6 @@
 	hackProof = TRUE
 	aiControlDisabled = 1
 	normal_integrity = 700
-	security_level = AIRLOCK_SECURITY_IRON
 	allow_repaint = FALSE
 
 //////////////////////////////////
@@ -597,7 +593,7 @@
 	name = "large glass airlock"
 	icon = 'icons/obj/doors/airlocks/glass_large/glass_large.dmi'
 	overlays_file = 'icons/obj/doors/airlocks/glass_large/overlays.dmi'
-	mask_file = 'icons/obj/doors/airlocks/mask_64x32_airlocks.dmi'
+	mask_file = 'icons/obj/doors/mask_64x32_doors.dmi'
 	mask_x = 16 // byond is consistent and sane
 	anim_parts = "left=-21,0;right=21,0;top=0,29"
 	opacity = FALSE

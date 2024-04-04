@@ -48,15 +48,15 @@
 		if(!O.anchored)
 			if(cargo_holder.cargo.len < cargo_holder.cargo_capacity)
 				chassis.visible_message("[chassis] lifts [target] and starts to load it into it's cargo compartment.")
-				O.anchored = TRUE
+				O.set_anchored(TRUE)
 				if(do_after_cooldown(target))
 					cargo_holder.cargo += O
 					O.forceMove(chassis)
-					O.anchored = FALSE
+					O.set_anchored(FALSE)
 					balloon_alert(chassis.occupant, "[target] has been loaded.")
 					log_message("Loaded [O]. Cargo compartment capacity: [cargo_holder.cargo_capacity - cargo_holder.cargo.len]", LOG_MECHA)
 				else
-					O.anchored = initial(O.anchored)
+					O.set_anchored(initial(O.anchored))
 			else
 				balloon_alert(chassis.occupant, "Not enough room in cargo compartment.")
 		else
@@ -108,15 +108,15 @@
 		if(!O.anchored)
 			if(cargo_holder.cargo.len < cargo_holder.cargo_capacity)
 				chassis.visible_message("[chassis] lifts [target] and starts to load it into it's cargo compartment.")
-				O.anchored = TRUE
+				O.set_anchored(TRUE)
 				if(do_after_cooldown(target))
 					cargo_holder.cargo += O
 					O.forceMove(chassis)
-					O.anchored = FALSE
+					O.set_anchored(FALSE)
 					balloon_alert(chassis.occupant, "[target] has been loaded.")
 					log_message("Loaded [O]. Cargo compartment capacity: [cargo_holder.cargo_capacity - cargo_holder.cargo.len]", LOG_MECHA)
 				else
-					O.anchored = initial(O.anchored)
+					O.set_anchored(initial(O.anchored))
 			else
 				balloon_alert(chassis.occupant, "Not enough room in cargo compartment.")
 		else
@@ -439,7 +439,7 @@
 			if(!T.broken && !T.burnt)
 				new T.floor_tile(T)
 			T.make_plating()
-	return !new_turf.intact
+	return !new_turf.underfloor_accessibility
 
 /obj/item/mecha_parts/mecha_equipment/cable_layer/proc/layCable(var/turf/new_turf)
 	if(equip_ready || !istype(new_turf) || !dismantleFloor(new_turf))
@@ -525,7 +525,6 @@
 		E.detach()
 		E.attach(N)
 		M.equipment -= E
-	N.dna_lock = M.dna_lock
 	N.maint_access = M.maint_access
 	N.strafe = M.strafe
 	N.obj_integrity = M.obj_integrity //This is not a repair tool

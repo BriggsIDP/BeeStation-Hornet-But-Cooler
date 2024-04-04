@@ -20,6 +20,8 @@
 
 	/// Used to cache this client's bans to save on DB queries
 	var/ban_cache = null
+	///If we are currently building this client's ban cache, this var stores the timeofday we started at
+	var/ban_cache_start = 0
 	/// Contains the last message sent by this client - used to protect against copy-paste spamming.
 	var/last_message	= ""
 	/// How many messages sent in the last 10 seconds
@@ -115,7 +117,7 @@
 	var/last_completed_asset_job = 0
 
 	/// rate limiting for the crew manifest
-	var/crew_manifest_delay
+	COOLDOWN_DECLARE(crew_manifest_delay)
 
 	//Tick when ghost roles are useable again
 	var/next_ghost_role_tick = 0

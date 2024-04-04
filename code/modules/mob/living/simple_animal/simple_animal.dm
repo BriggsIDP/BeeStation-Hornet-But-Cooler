@@ -95,6 +95,9 @@
 
 	var/special_process = FALSE
 
+	///set it TRUE if "health" is not relable to this simple mob.
+	var/do_not_show_health_on_stat_panel
+
 	//Discovery
 	var/discovery_points = 200
 
@@ -141,14 +144,14 @@
 		..()
 
 /mob/living/simple_animal/updatehealth()
-	..()
-	health = CLAMP(health, 0, maxHealth)
+	. = ..()
+	health = clamp(health, 0, maxHealth)
 	update_health_hud()
 
 /mob/living/simple_animal/update_health_hud()
 	if(!hud_used)
 		return
-	var/severity = 5 - CLAMP(FLOOR((health / maxHealth) * 5, 1), 0, 5)
+	var/severity = 5 - clamp(FLOOR((health / maxHealth) * 5, 1), 0, 5)
 	if(severity > 0)
 		overlay_fullscreen("brute", /atom/movable/screen/fullscreen/brute, severity)
 	else
@@ -335,10 +338,13 @@
 
 /mob/living/simple_animal/proc/update_simplemob_varspeed()
 	if(speed == 0)
-		remove_movespeed_modifier(MOVESPEED_ID_SIMPLEMOB_VARSPEED, TRUE)
-	add_movespeed_modifier(MOVESPEED_ID_SIMPLEMOB_VARSPEED, TRUE, 100, multiplicative_slowdown = speed, override = TRUE)
+		remove_movespeed_modifier(/datum/movespeed_modifier/simplemob_varspeed)
+	add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/simplemob_varspeed, multiplicative_slowdown = speed)
 
 /mob/living/simple_animal/get_stat_tab_status()
+	if(do_not_show_health_on_stat_panel)
+		return ..()
+
 	var/list/tab_data = ..()
 	tab_data["Health"] = GENERATE_STAT_TEXT("[round((health / maxHealth) * 100)]%")
 	return tab_data
@@ -462,8 +468,15 @@
 	else
 		..()
 
+/mob/living/simple_animal/update_resting()
+	if(resting)
+		ADD_TRAIT(src, TRAIT_IMMOBILIZED, RESTING_TRAIT)
+	else
+		REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, RESTING_TRAIT)
+	return ..()
+
 /mob/living/simple_animal/update_mobility(value_otherwise = TRUE)
-	if(IsUnconscious() || IsParalyzed() || IsStun() || IsKnockdown() || stat || resting)
+	if(HAS_TRAIT_NOT_FROM(src, TRAIT_IMMOBILIZED, BUCKLED_TRAIT))
 		drop_all_held_items()
 		mobility_flags = NONE
 	else if(buckled || IsImmobilized())
@@ -508,6 +521,14 @@
 	see_invisible = initial(see_invisible)
 	see_in_dark = initial(see_in_dark)
 	sight = initial(sight)
+
+	if(HAS_TRAIT(src, TRAIT_THERMAL_VISION))
+		sight |= (SEE_MOBS)
+		lighting_alpha = min(lighting_alpha, LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE)
+
+	if(HAS_TRAIT(src, TRAIT_XRAY_VISION))
+		sight |= (SEE_TURFS|SEE_MOBS|SEE_OBJS)
+		see_in_dark = max(see_in_dark, 8)
 
 	if(client.eye != src)
 		var/atom/A = client.eye
@@ -634,3 +655,8 @@
 	if (AIStatus == AI_Z_OFF)
 		SSidlenpcpool.idle_mobs_by_zlevel[old_z] -= src
 		toggle_ai(initial(AIStatus))
+
+/mob/living/simple_animal/give_mind(mob/user)
+	. = ..()
+	if(.)
+		sentience_act(user)

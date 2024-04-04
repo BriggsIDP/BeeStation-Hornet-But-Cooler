@@ -507,9 +507,9 @@
 				return_list += wordlist[i]
 			bit = bit << 1
 	else
-		for(var/bit = 1, bit<=65535, bit = bit << 1)
-			if(bitfield & bit)
-				return_list += bit
+		for(var/bit = 0 to 24)
+			if(bitfield & (1 << bit))
+				return_list += (1 << bit)
 
 	return return_list
 
@@ -654,6 +654,21 @@
 			.[i] = key
 			.[key] = value
 
+/// A version of deep_copy_list that actually supports associative list nesting: list(list(list("a" = "b"))) will actually copy correctly.
+/proc/deep_copy_list_alt(list/inserted_list)
+	if(!islist(inserted_list))
+		return inserted_list
+	var/copied_list = inserted_list.Copy()
+	. = copied_list
+	for(var/key_or_value in inserted_list)
+		if(isnum_safe(key_or_value) || !inserted_list[key_or_value])
+			continue
+		var/value = inserted_list[key_or_value]
+		var/new_value = value
+		if(islist(value))
+			new_value = deep_copy_list_alt(value)
+		copied_list[key_or_value] = new_value
+
 /**
  takes an input_key, as text, and the list of keys already used, outputting a replacement key in the format of "[input_key] ([number_of_duplicates])" if it finds a duplicate
 
@@ -748,6 +763,16 @@
 
 	return TRUE
 
+#define LAZY_LISTS_OR(left_list, right_list)\
+	( length(left_list)\
+		? length(right_list)\
+			? (left_list | right_list)\
+			: left_list.Copy()\
+		: length(right_list)\
+			? right_list.Copy()\
+			: null\
+	)
+
 ///Returns a list with items filtered from a list that can call callback
 /proc/special_list_filter(list/L, datum/callback/condition)
 	if(!islist(L) || !length(L) || !istype(condition))
@@ -768,3 +793,15 @@
 			stack_trace("[name] is not sorted. value at [index] ([value]) is in the wrong place compared to the previous value of [last_value] (when compared to by [cmp])")
 
 		last_value = value
+
+/**
+ * Converts a normal array list to an associated list, with the keys being the original values, and the value being the index of the value in the original list.
+ * All keys are converted to strings.
+ * Example: list("a", "b", 1, 2, 3) -> list("a" = 1, "b" = 2, "1" = 3, "2" = 4, "3" = 5)
+*/
+/proc/list_to_assoc_index(list/input)
+	. = list()
+	for(var/i = 1 to length(input))
+		var/key = "[input[i]]"
+		if(isnull(.[key]))
+			.[key] = i

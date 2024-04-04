@@ -217,7 +217,7 @@
 	var/list/faction = list("spiders")
 
 /obj/structure/spider/spiderling/Destroy()
-	new/obj/item/reagent_containers/food/snacks/spiderling(get_turf(src))
+	new /obj/item/food/spiderling(get_turf(src))
 	. = ..()
 
 /obj/structure/spider/spiderling/Initialize(mapload)
@@ -227,7 +227,6 @@
 	START_PROCESSING(SSobj, src)
 	AddElement(/datum/element/point_of_interest)
 	AddComponent(/datum/component/swarming)
-	return ..()
 
 /obj/structure/spider/spiderling/hunter
 	grow_as = /mob/living/simple_animal/hostile/poison/giant_spider/hunter
