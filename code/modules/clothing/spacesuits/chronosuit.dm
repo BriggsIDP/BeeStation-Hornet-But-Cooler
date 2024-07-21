@@ -4,7 +4,7 @@
 	icon_state = "chronohelmet"
 	item_state = "chronohelmet"
 	slowdown = 1
-	armor = list(MELEE = 60,  BULLET = 60, LASER = 60, ENERGY = 60, BOMB = 30, BIO = 90, RAD = 90, FIRE = 100, ACID = 100, STAMINA = 70)
+	armor = list(MELEE = 60,  BULLET = 60, LASER = 60, ENERGY = 60, BOMB = 30, BIO = 90, RAD = 90, FIRE = 100, ACID = 100, STAMINA = 70, BLEED = 80)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	var/obj/item/clothing/suit/space/chronos/suit
 
@@ -24,7 +24,7 @@
 	icon_state = "chronosuit"
 	item_state = "chronosuit"
 	actions_types = list(/datum/action/item_action/toggle)
-	armor = list(MELEE = 60,  BULLET = 60, LASER = 60, ENERGY = 60, BOMB = 30, BIO = 90, RAD = 90, FIRE = 100, ACID = 1000, STAMINA = 70)
+	armor = list(MELEE = 60,  BULLET = 60, LASER = 60, ENERGY = 60, BOMB = 30, BIO = 90, RAD = 90, FIRE = 100, ACID = 1000, STAMINA = 70, BLEED = 80)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	var/list/chronosafe_items = list(/obj/item/chrono_eraser, /obj/item/gun/energy/chrono_gun)
 	var/obj/item/clothing/head/helmet/space/chronos/helmet
@@ -95,7 +95,7 @@
 		user.update_atom_colour()
 		user.animate_movement = FORWARD_STEPS
 		user.notransform = FALSE
-		user.anchored = FALSE
+		user.set_anchored(FALSE)
 		teleporting = FALSE
 		for(var/obj/item/I in user.held_items)
 			REMOVE_TRAIT(I, TRAIT_NODROP, CHRONOSUIT_TRAIT)
@@ -137,7 +137,7 @@
 		user.animate_movement = NO_STEPS
 		user.changeNext_move(8 + phase_in_ds)
 		user.notransform = 1
-		user.anchored = TRUE
+		user.set_anchored(TRUE)
 		user.Stun(INFINITY)
 
 		animate(user, color = "#00ccee", time = 3)

@@ -8,6 +8,8 @@
 
 	var/damtype = BRUTE
 	var/force = 0
+	/// How much bleeding damage do we cause, see __DEFINES/mobs.dm
+	var/bleed_force = 0
 
 	var/datum/armor/armor
 	/// The integrity the object starts at. Defaults to max_integrity.
@@ -58,13 +60,9 @@
 	var/emag_toggleable = FALSE
 
 /obj/vv_edit_var(vname, vval)
-	switch(vname)
-		if("anchored")
-			setAnchored(vval)
-			return TRUE
-		if(NAMEOF(src, obj_flags))
-			if ((obj_flags & DANGEROUS_POSSESSION) && !(vval & DANGEROUS_POSSESSION))
-				return FALSE
+	if(vname == NAMEOF(src, obj_flags))
+		if ((obj_flags & DANGEROUS_POSSESSION) && !(vval & DANGEROUS_POSSESSION))
+			return FALSE
 	return ..()
 
 /obj/Initialize(mapload)
@@ -111,9 +109,6 @@
 	SStgui.close_uis(src)
 	. = ..()
 
-/obj/proc/setAnchored(anchorvalue)
-	SEND_SIGNAL(src, COMSIG_OBJ_SETANCHORED, anchorvalue)
-	anchored = anchorvalue
 
 /obj/assume_air(datum/gas_mixture/giver)
 	if(loc)
