@@ -24,11 +24,11 @@
 	speak_emote = list("chitters")
 
 	basic_mob_flags = DEL_ON_DEATH
-	faction = list("hostile")
+	faction = list(FACTION_HOSTILE, FACTION_MAINT_CREATURES)
 
 	ai_controller = /datum/ai_controller/basic_controller/cockroach
 
-/mob/living/basic/cockroach/Initialize()
+/mob/living/basic/cockroach/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/death_drops, list(/obj/effect/decal/cleanable/insectguts))
 	// AddElement(/datum/element/swabable, CELL_LINE_TABLE_COCKROACH, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 7) //Bee edit: No swabable elements

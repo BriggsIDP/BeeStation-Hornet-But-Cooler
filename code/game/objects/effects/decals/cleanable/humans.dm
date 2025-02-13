@@ -61,6 +61,8 @@
 	icon_state = "floor1-old"
 	var/list/datum/disease/diseases = list()
 
+CREATION_TEST_IGNORE_SUBTYPES(/obj/effect/decal/cleanable/blood/old)
+
 /obj/effect/decal/cleanable/blood/old/Initialize(mapload, list/datum/disease/diseases)
 	add_blood_DNA(list("Non-human DNA" = random_blood_type())) // Needs to happen before ..()
 	. = ..()
@@ -111,6 +113,8 @@
 	drydesc = "They look bloody and gruesome while some terrible smell fills the air."
 	///Information about the diseases our streaking spawns
 	var/list/streak_diseases
+
+CREATION_TEST_IGNORE_SUBTYPES(/obj/effect/decal/cleanable/blood/gibs)
 
 /obj/effect/decal/cleanable/blood/gibs/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
@@ -205,6 +209,8 @@
 	drydesc = "Space Jesus, why didn't anyone clean this up? They smell terrible."
 	var/list/datum/disease/diseases = list()
 
+CREATION_TEST_IGNORE_SUBTYPES(/obj/effect/decal/cleanable/blood/gibs/old)
+
 /obj/effect/decal/cleanable/blood/gibs/old/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
 	setDir(pick(1, 2, 4, 8))
@@ -274,9 +280,9 @@
 
 	for(var/Ddir in GLOB.cardinals)
 		if(old_entered_dirs & Ddir)
-			entered_dirs |= angle2dir_cardinal(dir2angle(Ddir) + ang_change)
+			entered_dirs |= turn_cardinal(Ddir, ang_change)
 		if(old_exited_dirs & Ddir)
-			exited_dirs |= angle2dir_cardinal(dir2angle(Ddir) + ang_change)
+			exited_dirs |= turn_cardinal(Ddir, ang_change)
 
 	update_appearance()
 	return ..()

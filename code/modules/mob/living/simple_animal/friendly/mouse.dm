@@ -14,10 +14,14 @@
 	see_in_dark = 6
 	maxHealth = 5
 	health = 5
+	faction = list(FACTION_RAT)
 	butcher_results = list(/obj/item/food/meat/slab/mouse = 1)
-	response_help  = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm   = "splats"
+	response_help_continuous = "pets"
+	response_help_simple = "pet"
+	response_disarm_continuous = "shoos"
+	response_disarm_simple = "shoo"
+	response_harm_continuous = "stomps on"
+	response_harm_simple = "stomp on"
 	density = FALSE
 	ventcrawler = VENTCRAWLER_ALWAYS
 	pass_flags = PASSTABLE | PASSMOB
@@ -80,7 +84,7 @@
 	if( ishuman(AM) )
 		if(!stat)
 			var/mob/M = AM
-			to_chat(M, "<span class='notice'>[icon2html(src, M)] Squeak!</span>")
+			to_chat(M, span_notice("[icon2html(src, M)] Squeak!"))
 
 /mob/living/simple_animal/mouse/handle_automated_action()
 	if(prob(chew_probability))
@@ -89,13 +93,13 @@
 			var/obj/structure/cable/C = locate() in F
 			if(C && prob(15))
 				if(C.avail())
-					visible_message("<span class='warning'>[src] chews through the [C]. It's toast!</span>")
+					visible_message(span_warning("[src] chews through the [C]. It's toast!"))
 					playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
 					C.deconstruct()
 					death(toast=1)
 				else
 					C.deconstruct()
-					visible_message("<span class='warning'>[src] chews through the [C].</span>")
+					visible_message(span_warning("[src] chews through the [C]."))
 
 /*
  * Mouse types
@@ -119,9 +123,12 @@
 /mob/living/simple_animal/mouse/brown/Tom
 	name = "Tom"
 	desc = "Jerry the cat is not amused."
-	response_help  = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm   = "splats"
+	response_help_continuous = "pets"
+	response_help_simple = "pet"
+	response_disarm_continuous = "shoos"
+	response_disarm_simple = "shoo"
+	response_harm_continuous = "stomps on"
+	response_harm_simple = "stomp on"
 	gold_core_spawnable = NO_SPAWN
 
 /obj/item/food/deadmouse
@@ -140,10 +147,10 @@
 	if(I.is_sharp() && user.a_intent == INTENT_HARM)
 		if(isturf(loc))
 			new /obj/item/food/meat/slab/mouse(loc)
-			to_chat(user, "<span class='notice'>You butcher [src].</span>")
+			to_chat(user, span_notice("You butcher [src]."))
 			qdel(src)
 		else
-			to_chat(user, "<span class='warning'>You need to put [src] on a surface to butcher it!</span>")
+			to_chat(user, span_warning("You need to put [src] on a surface to butcher it!"))
 	else
 		return ..()
 
